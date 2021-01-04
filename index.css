@@ -5,7 +5,7 @@ body{
     background-blend-mode: multiply;
 }
 
-h1{
+.custom_h1{
     position: fixed;
     color: white;
     font-size: 42px;
@@ -80,17 +80,17 @@ h1{
     right: 200px;
     top: 30px;
 }
-ul{
+.custom_ul{
     list-style-type: none;
     padding: 0;
     
     z-index: 2;
 }
-li{
+.custom_li{
     display: inline;
     margin-right: 20px;
 }
-a{
+.custom_a{
     text-decoration: none;
     color: rgb(153, 153, 153);
     font-family: "Myriad Pro";
