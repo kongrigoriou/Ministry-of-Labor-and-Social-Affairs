@@ -99,3 +99,7 @@ a{
     color: rgb(81, 153, 173);
     font-family: "Myriad Pro";
 }
+
+.BrCr{
+    position: fixed;
+}
