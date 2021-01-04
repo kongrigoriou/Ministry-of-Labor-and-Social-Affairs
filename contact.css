@@ -1,0 +1,6 @@
+body{
+    background: url("Assets/background.jpg") rgba(0, 0, 0, 0.39);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}

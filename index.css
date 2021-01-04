@@ -1,0 +1,101 @@
+body{
+    background: url("Assets/background.jpg") rgba(0, 0, 0, 0.39);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+h1{
+    position: fixed;
+    color: white;
+    font-size: 42px;
+    font-family: "Myriad Pro";
+    left: 20vw;
+    top: 40vh;
+    z-index: 100;
+}
+/* Search Bar */
+.search_container{
+    position: fixed;
+    left: 20vw;
+    top: 60vh;
+}
+.search_bar{
+    width: 60vw;
+    height: 50px;
+
+    border-style: none;
+    background-color: white;
+    border-radius: 10px;
+
+    color:rgb(117, 117, 126);
+    font-size: 24px;
+    font-family: "Myriad Pro";
+    padding-left: 50px;
+}
+
+/* Navigation! */
+.navigation{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    font-size: large;
+}
+.nav_rectangle{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 13vh;
+    background-color: white;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.center_rel{
+    position: fixed;
+    left: 47vw;
+    top: 10px;
+    width: 5.5vw;
+}
+.sth{
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    width: 4vw;
+}
+.flag{
+    position: fixed;
+    right: 80px;
+    top: 25px;
+    width: 3vw;
+}
+/* Navigation text */
+.left_nav{
+    position: fixed;
+    left: 30px;
+    top: 30px;
+}
+.right_nav{
+    position: fixed;
+    right: 200px;
+    top: 30px;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    
+    z-index: 2;
+}
+li{
+    display: inline;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+    font-family: "Myriad Pro";
+}
+.cov{
+    color: rgb(81, 153, 173);
+    font-family: "Myriad Pro";
+}
