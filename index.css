@@ -108,8 +108,11 @@ body{
 }
 
 .BrCr{
-    position: relative;
-    top: 130px;
+    position: fixed;
+    top: 140px;
+    width: 100%;
+    z-index: 2;
+    align-items: center;
 }
 
 
