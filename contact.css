@@ -5,6 +5,41 @@ body{
     background-blend-mode: multiply;
 }
 
+.contact{
+    position: fixed;
+    color: white;
+    font-size: 42px;
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
+    left: 20vw;
+    top: 20vh;
+    z-index: 100;
+}
+
+/* .square {
+    height: 300px;
+    width: 300px;
+    background-color: #555;
+    position: relative;
+    top: 400px;
+    left: 100px;
+  } */
+
+.square {
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  padding: 5px;
+  /* border: 1px solid blue;     */
+  background-color: rgba(255, 255, 255, 0.856); 
+  position: relative;
+  top: 400px;
+  left: 50px;
+  margin: 10px;
+  text-align: center;
+
+}
+  
+
 /* Ela pano
 ante gamisou
 :) */
