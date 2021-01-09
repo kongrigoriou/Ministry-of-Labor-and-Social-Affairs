@@ -109,10 +109,26 @@ body{
 
 .BrCr{
     position: fixed;
-    top: 140px;
-    width: 100%;
-    z-index: 2;
-    align-items: center;
+    top: 122px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* override bootstrap constructor */
+.row{
+
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* remove rounded corners */
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+
 }
 
 
