@@ -3,10 +3,11 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
+    
 }
 
 .contact{
-    position: fixed;
+    position: relative;
     color: white;
     font-size: 42px;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
@@ -15,31 +16,63 @@ body{
     z-index: 100;
 }
 
-/* .square {
-    height: 300px;
-    width: 300px;
-    background-color: #555;
-    position: relative;
-    top: 400px;
-    left: 100px;
-  } */
-
 .square {
   display: inline-block;
   width: 350px;
   height: 350px;
-  padding: 5px;
+  padding: 0px;
   /* border: 1px solid blue;     */
   background-color: rgba(255, 255, 255, 0.856); 
   position: relative;
-  top: 400px;
-  left: 50px;
-  margin: 10px;
+  /* top: 400px;
+  left: 50px; */
+  margin: 20px;
   text-align: center;
 
 }
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 80vh; /* These two lines are counted as one :-)       */
   
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.horizontal-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myriad{
+  font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
+}
+
+.white{
+  color: white;
+}
+
+.rectangle{
+  display:block;
+  width: 1300px;
+  height: 350px;
+  padding: 5px;
+  /* border: 1px solid blue;     */
+  background-color: rgba(255, 255, 255, 0.856); 
+  position: static;
+  /* margin: 20px; */
+  text-align: center;
+
+}
+
+/* .flex-center {
+  display: flex;
+  justify-content: center;
+} */
 
 /* Ela pano
 ante gamisou
 :) */
+
