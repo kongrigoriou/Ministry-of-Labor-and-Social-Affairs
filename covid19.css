@@ -12,7 +12,7 @@
     /* remove margins */
     margin-left: 0;
     margin-right: 0;
-    margin-top: ;
+    margin-top: 0;
     height: 1vh;
 }
 
@@ -24,7 +24,7 @@
     font-size: 42px;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     left: 20vh;
-    top: 17vh;
+    top: 15vh;
     z-index: 100;
 }
 
@@ -45,22 +45,48 @@
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
 }
 
+.covid_h5{
+
+    color: white;
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
+
+}
+
 /* text backround */
 .square{
 
-    position: relative;
+    position: fixed;
 
     display: inline-block;
-    width: 50vw;
-    height: 80vh;
+    width: 80vw;
+    height: 100vh;
 
     background-color: black;
     /* opacity */
     background: rgba(0, 0, 0, 0.4);
 
-    top: 20vh;
+    top: 0vh;
     left: 10vw;
     right: 10vw;
 
     text-align: left;
+}
+
+/* carousel override */
+.carousel{
+
+    top: 15vh;
+    left: 24vw;
+
+    height: 70vh;
+    width: 50vw;
+
+}
+
+.extra{
+    position: relative;
+
+    top: 25vh;
+    left: 20vw;
+
 }
