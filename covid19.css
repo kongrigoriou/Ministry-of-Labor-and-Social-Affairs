@@ -86,7 +86,23 @@
 .extra{
     position: relative;
 
-    top: 25vh;
+    top: 160vh;
     left: 20vw;
+    z-index: 100;
+}
 
+.employer{
+
+    position: relative;
+    top: 100vh;
+    left: 20vw;
+    z-index: 100;
+}
+
+.employee{
+
+    position: relative;
+    top: 120vh;
+    left: 20vw;
+    z-index: 100;
 }
