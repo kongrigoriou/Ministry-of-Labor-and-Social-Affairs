@@ -1,0 +1,157 @@
+body{
+    background: url("Assets/background.jpg") rgba(0, 0, 0, 0.39);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.custom_h1{
+    position: fixed;
+    color: white;
+    font-size: 42px;
+    font-family: "Myriad Pro";
+    left: 20vw;
+    top: 40vh;
+    z-index: 100;
+}
+
+/* Design */
+:root{
+    --dark:rgba(0, 0, 0, 0.8);
+}
+
+.bg_rec{
+    position: fixed;
+    top: 13vh;
+    left: 10vw;
+    width: 80vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile{
+    position: fixed;
+    top: 20vh;
+    left: 14vw;
+    width: 58vw;
+    height: 20vh;
+    background-color: var(--dark);
+    border-radius: 4px;
+
+    font-size: large;
+}
+.basic_info{
+    mix-blend-mode: exclusion;
+    position: fixed;
+    font-family: "Myriad Pro";
+    left: 23vw;
+    top: 22vh;
+}
+._name{
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+}
+._misc{
+    color: white;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+.pic{
+    position: fixed;
+    top: 20vh;
+    left: 14vw;
+    width: 10.2vw;
+    border-radius: 2px;
+}
+.info_rec{
+    position: fixed;
+    top: 42vh;
+    left: 14vw;
+    width: 58vw;
+    height: 58vh;
+    background-color: var(--dark);
+    border-radius: 4px;
+}
+.side_rec{
+    position: fixed;
+    top: 20vh;
+    right: 12vw;
+    width: 15vw;
+    height: 80vh;
+    background-color: var(--dark);
+    border-radius: 4px;
+}
+
+
+/* Navigation! */
+.navigation{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    font-size: large;
+}
+.nav_rectangle{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 13vh;
+    background-color: white;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.center_rel{
+    position: fixed;
+    left: 47vw;
+    top: 10px;
+    width: 5.5vw;
+}
+.sth{
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    width: 4vw;
+}
+.flag{
+    position: fixed;
+    right: 80px;
+    top: 25px;
+    width: 3vw;
+}
+/* Navigation text */
+.left_nav{
+    position: fixed;
+    left: 30px;
+    top: 30px;
+}
+.right_nav{
+    position: fixed;
+    right: 200px;
+    top: 30px;
+}
+.custom_ul{
+    list-style-type: none;
+    padding: 0;
+    
+    z-index: 2;
+}
+.custom_li{
+    display: inline;
+    margin-right: 20px;
+}
+.custom_a{
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+    font-family: "Myriad Pro";
+}
+.cov{
+    color: rgb(81, 153, 173);
+    font-family: "Myriad Pro";
+}
+
+.BrCr{
+    position: fixed;
+}
