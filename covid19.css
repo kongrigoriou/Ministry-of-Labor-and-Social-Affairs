@@ -61,21 +61,22 @@
     width: 80vw;
     height: 100vh;
 
-    background-color: black;
     /* opacity */
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
 
     top: 0vh;
     left: 10vw;
     right: 10vw;
 
     text-align: left;
+
+    z-index: 0;
 }
 
 /* carousel override */
 .carousel{
 
-    top: 15vh;
+    top: 17vh;
     left: 24vw;
 
     height: 70vh;

@@ -9,7 +9,7 @@ body{
     position: fixed;
     color: white;
     font-size: 42px;
-    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     left: 20vw;
     top: 40vh;
     z-index: 100;
@@ -43,7 +43,7 @@ body{
 .basic_info{
     mix-blend-mode: exclusion;
     position: fixed;
-    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     left: 23vw;
     top: 22vh;
 }
@@ -100,7 +100,7 @@ body{
     position: fixed;
     color: white;
     font-size: 20px;
-    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     text-align: center;
 
     left: 22vw;
@@ -121,7 +121,7 @@ body{
     position: fixed;
     color: white;
     font-size: 20px;
-    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     text-align: center;
 
     left: 51vw;
@@ -143,7 +143,7 @@ body{
     position: fixed;
     color: white;
     font-size: 20px;
-    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     text-align: center;
 
     right: 14vw;
@@ -163,7 +163,7 @@ body{
     margin-top: 4px;
     color: white;
     font-size: 14px;
-    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     text-align: left;
 }
 
@@ -226,11 +226,11 @@ body{
 .custom_a{
     text-decoration: none;
     color: rgb(153, 153, 153);
-    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
 }
 .cov{
     color: rgb(81, 153, 173);
-    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
 }
 
 .BrCr{

@@ -4,6 +4,7 @@
         <!-- Connect css file -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="index.css">
         <title>Υπουργείο Εργασίας - Προφίλ</title>
     </head>
 
@@ -35,7 +36,7 @@
             <!-- ministry button -->
             <div class="ministry_logo">
                 <!-- it redirects to the starting page -->
-                <a href="./index.html">
+                <a href="./index.php">
                     <img src="Assets/Navigation/gd_logo.png" class="center_rel">
                 </a>
             </div>
@@ -47,7 +48,7 @@
 
             <!-- language icon -->
             <div class="language">
-                <a href="./index_en.html">
+                <a href="./index_en.php">
                     <img src="Assets/Navigation/us_flag.png" class="flag">
                 </a>
             </div>
