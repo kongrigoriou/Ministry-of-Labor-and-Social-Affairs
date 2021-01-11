@@ -1,5 +1,5 @@
 body{
-    background: url("Assets/background.jpg") rgba(0, 0, 0, 0.39);
+    background: url("./Assets/background.jpg") rgba(0, 0, 0, 0.39);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
@@ -9,7 +9,7 @@ body{
     position: fixed;
     color: white;
     font-size: 42px;
-    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
+    font-family: url("./Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     left: 20vw;
     top: 40vh;
     z-index: 100;
@@ -121,7 +121,7 @@ body{
 
 .BrCr{
     position: fixed;
-    top: 11vh;
+    top: 12.5vh;
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;

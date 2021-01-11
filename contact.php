@@ -40,7 +40,7 @@
                 <!-- ministry button -->
                 <div class="ministry_logo">
                     <!-- it redirects to the starting page -->
-                    <a href="./index.html">
+                    <a href="./index.php">
                         <img src="Assets/Navigation/gd_logo.png" class="center_rel">
                     </a>
                 </div>
@@ -52,7 +52,7 @@
 
                 <!-- language icon -->
                 <div class="language">
-                    <a href="./index_en.html">
+                    <a href="./index_en.php">
                         <img src="Assets/Navigation/us_flag.png" class="flag">
                     </a>
                 </div>
@@ -64,7 +64,7 @@
             <div class ="BrCr">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Αρχική</a></li>
+                        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Επικοινωνία</li>
                     </ol>
                 </nav>

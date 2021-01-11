@@ -86,7 +86,7 @@
 .extra{
     position: relative;
 
-    top: 160vh;
+    top: 180vh;
     left: 20vw;
     z-index: 100;
 }
@@ -105,4 +105,14 @@
     top: 120vh;
     left: 20vw;
     z-index: 100;
+}
+
+.case{
+
+    position: relative;
+
+    top: 160vh;
+    left: 20vw;
+    z-index: 100;
+
 }

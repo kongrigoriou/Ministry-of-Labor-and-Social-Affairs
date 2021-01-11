@@ -21,7 +21,7 @@
                 <!-- left portion of the navigation bar -->
                 <div class="left_nav">
                     <ul class="custom_ul">
-                        <li class="custom_li"><a class="custom_a" href="contact.html">Επικοινωνία</a></li>
+                        <li class="custom_li"><a class="custom_a" href="contact.php">Επικοινωνία</a></li>
                         <li class="custom_li"><a class="custom_a" href="#ministry">Υπουργείο</a></li>
                         <li class="custom_li"><a class="custom_a" href="#law">Νομοθεσία</a></li>
                         <li class="custom_li"><a class="custom_a" href="#apply">Αιτήσεις</a></li>
@@ -40,7 +40,7 @@
                 <!-- ministry button -->
                 <div>
                     <!-- it redirects to the starting page -->
-                    <a href="./index.html">
+                    <a href="./index.php">
                         <img src="Assets/Navigation/gd_logo.png" class="center_rel">
                     </a>
                 </div>
@@ -52,7 +52,7 @@
 
                 <!-- language icon -->
                 <div>
-                    <a href="./index_en.html">
+                    <a href="./index_en.php">
                         <img src="Assets/Navigation/us_flag.png" class="flag">
                     </a>
                 </div>
@@ -63,7 +63,7 @@
             <div class ="BrCr">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Αρχική</a></li>
+                        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Κορωνοϊός</li>
                     </ol>
                 </nav>
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <a href="#info">
+                            <a href="#sick">
                                 <img class="d-block w-100" src="Assets/covid/black.png" alt="Krousma">
                             </a>
                             <div class="carousel-caption d-none d-md-block">
@@ -181,6 +181,25 @@
                 <!-- end of column -->
                 </div>
             <!-- end of element -->
+            </div>
+
+            <!-- measures for covid case in the workplace -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="case" id="sick">
+                        <h2 class="covid_h2">Απαραίτητες ενέργειες σε περίπτωση εκδήλωσης των συμπτωμάτων σε εργαζόμενο κατά τη διάρκεια εργασίας του</h2>
+                        <p class="covid_h5">
+                            Εργαζόμενος που εμφανίσει αιφνιδίως τα προαναφερόμενα συμπτώματα αναμένει σε χώρο όπου δε θα
+                            έρχεται σε επαφή με άλλα άτομα, ενημερώνονται ο ιατρός εργασίας (όπου υπάρχει) και ο προϊστάμενος
+                            όταν δεν υπάρχει ιατρός εργασίας και ειδοποιείται άμεσα ο ΕΟΔΥ ώστε να παράσχει τις απαραίτητες
+                            οδηγίες, οι οποίες πρέπει να ακολουθούνται πιστά. Ο χώρος όπου παρέμεινε ο εργαζόμενος πρέπει να
+                            καθαρίζεται και να απολυμαίνεται, μετά την αποχώρησή του, από το προσωπικό καθαριότητας, σύμφωνα
+                            με τις οδηγίες του ΕΟΔΥ όπως αναγράφονται στην ιστοσελίδα του (www.eody.gov.gr, ενότητα: «Οδηγίες
+                            για τον περιβαλλοντικό καθαρισμό μη υγειονομικών μονάδων που έχουν εκτεθεί στον ιό SARS-CoV-2»).
+                            Σε περιπτώσεις που είναι εφικτό, συνιστάται η εξ’ αποστάσεως εργασία. <br>
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- additional information -->

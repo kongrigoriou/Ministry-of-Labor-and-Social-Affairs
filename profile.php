@@ -35,7 +35,7 @@
             <!-- ministry button -->
             <div class="ministry_logo">
                 <!-- it redirects to the starting page -->
-                <a href="./index.html">
+                <a href="./index.php">
                     <img src="Assets/gd_logo.png" class="center_rel">
                 </a>
             </div>
@@ -47,7 +47,7 @@
 
             <!-- language icon -->
             <div class="language">
-                <a href="./index_en.html">
+                <a href="./index_en.php">
                     <img src="Assets/us_flag.png" class="flag">
                 </a>
             </div>

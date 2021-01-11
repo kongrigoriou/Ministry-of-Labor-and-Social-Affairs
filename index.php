@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xml:lang="gr">
     <head>
         <!-- Connect css file -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -19,7 +19,7 @@
                     <!-- left portion of the navigation bar -->
                     <div class="left_nav">
                         <ul class="custom_ul">
-                                <li class="custom_li"><a class="custom_a" href="contact.html">Επικοινωνία</a></li>
+                                <li class="custom_li"><a class="custom_a" href="contact.php">Επικοινωνία</a></li>
                                 <li class="custom_li"><a class="custom_a" href="#ministry">Υπουργείο</a></li>
                                 <li class="custom_li"><a class="custom_a" href="#law">Νομοθεσία</a></li>
                                 <li class="custom_li"><a class="custom_a" href="#apply">Αιτήσεις</a></li>
@@ -29,7 +29,7 @@
                     <!-- right portion of the navigation bar -->
                     <div class="right_nav">
                         <ul class="custom_ul">
-                            <li class="custom_li"><a href="covid19.html" class="cov custom_a">Κορωνοϊός</a></li>
+                            <li class="custom_li"><a href="covid19.php" class="cov custom_a">Κορωνοϊός</a></li>
                             <li class="custom_li"><a class="custom_a" href="#help">Βοήθεια</a></li>
                             <li class="custom_li"><a class="custom_a" href="#login">Σύνδεση</a></li>
                         </ul>
@@ -38,7 +38,7 @@
                     <!-- ministry button -->
                     <div class="ministry_logo">
                         <!-- it redirects to the starting page -->
-                        <a href="./index.html">
+                        <a href="./index.php">
                             <img src="Assets/Navigation/gd_logo.png" class="center_rel">
                         </a>
                     </div>
@@ -50,7 +50,7 @@
     
                     <!-- language icon -->
                     <div class="language">
-                        <a href="./index_en.html">
+                        <a href="./index_en.php">
                             <img src="Assets/Navigation/us_flag.png" class="flag">
                         </a>
                     </div>
@@ -76,6 +76,6 @@
         
 
         
-</body>
+    </body>
 
 </html>
