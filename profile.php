@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xml:lang="gr">
     <head>
         <!-- Connect css file -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -35,20 +35,20 @@
             <!-- ministry button -->
             <div class="ministry_logo">
                 <!-- it redirects to the starting page -->
-                <a href="./index.php">
-                    <img src="Assets/gd_logo.png" class="center_rel">
+                <a href="./index.html">
+                    <img src="Assets/Navigation/gd_logo.png" class="center_rel">
                 </a>
             </div>
 
             <!-- stay home icon -->
             <div class="stay_home">
-                <img src="Assets/menoume_svg.svg" class="sth">
+                <img src="Assets/Navigation/menoume_svg.svg" class="sth">
             </div>
 
             <!-- language icon -->
             <div class="language">
-                <a href="./index_en.php">
-                    <img src="Assets/us_flag.png" class="flag">
+                <a href="./index_en.html">
+                    <img src="Assets/Navigation/us_flag.png" class="flag">
                 </a>
             </div>
         </div>
@@ -59,7 +59,10 @@
 
             <!-- User Interface -->
             <div class="profile">
-                <img src="Assets/user/profile_picture.png" class="pic">
+                <div class="pic">
+                    <div class="overlay"></div>
+                </div>
+
                 <div class="basic_info">
                     <ul style="list-style: none;">
                         <li class="_name">Γιάννης Κοτρώνης </li>
@@ -68,8 +71,30 @@
                     </ul>
                 </div>
             </div>
-            <div class="info_rec"></div>
-            <div class="side_rec"></div>
+            <div class="info_rec_l">
+                <div class="info_title_l">
+                    Προσωπικά Στοιχεία
+                </div>
+            </div>
+            <div class="info_rec_r">
+                <div class="info_title_r">
+                    Στοιχεία Εργαζομένου
+                </div>
+            </div>
+            <div class="side_rec">
+                <div class="side_title">
+                    Ιστορικό Αιτήσεων
+                </div>
+                <ul class="side_ul">
+                    <li class="side_li">14/12/1969 - Έλα</li>
+                    <li class="side_li">13/12/1969 - Πάνο</li>
+                    <li class="side_li">12/12/1969 - Άι</li>
+                    <li class="side_li">11/12/1969 - Και</li>
+                    <li class="side_li">10/12/1969 - Γαμις</li>
+                    <li class="side_li">09/12/1969 - Ρε</li>
+                    <li class="side_li">08/12/1969 - Μανγκα</li>
+                </ul>
+            </div>
         </div>
     </body>
 </html>

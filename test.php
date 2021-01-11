@@ -9,19 +9,17 @@
 
 <body>
     
+    <!-- connection to the database -->
     <?php
 
     /*** mysql hostname ***/
     $hostname = 'localhost';
 
     /*** mysql username ***/
-    $username = 'username';
-
-    /*** mysql password ***/
-    $password = 'password';
+    $username = 'root';
 
     try {
-        $dbh = new PDO("mysql:host=$hostname;dbname=mysql", $username, $password);
+        $dbh = new PDO("mysql:host=$hostname;dbname=mysql", $username);
         /*** echo a message saying we have connected ***/
         echo 'Connected to database';
         }
@@ -30,6 +28,9 @@
         echo $e->getMessage();
         }
     ?>
+
+    <!-- test querie -->
+    
 
 </body>
 </html>

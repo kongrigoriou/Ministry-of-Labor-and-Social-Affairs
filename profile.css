@@ -9,7 +9,7 @@ body{
     position: fixed;
     color: white;
     font-size: 42px;
-    font-family: "Myriad Pro";
+    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
     left: 20vw;
     top: 40vh;
     z-index: 100;
@@ -43,7 +43,7 @@ body{
 .basic_info{
     mix-blend-mode: exclusion;
     position: fixed;
-    font-family: "Myriad Pro";
+    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
     left: 23vw;
     top: 22vh;
 }
@@ -58,23 +58,78 @@ body{
     margin: 10px 0;
 }
 
-
+/* Pic suggest edit on hover */
 .pic{
+    background: url("Assets/User/profile_picture.png");
+    background-repeat: no-repeat;
+    background-size: 10.2vw 20vh;
+
     position: fixed;
     top: 20vh;
     left: 14vw;
     width: 10.2vw;
+    height: 20vh;
     border-radius: 2px;
 }
-.info_rec{
+.overlay{
+    position: fixed;
+    top: 20vh;
+    left: 14vw;
+    width: 10.2vw;
+    height: 20vh;
+
+    opacity: 0;
+    transition: .4s ease;
+    background-color: black;
+}
+.pic:hover .overlay{
+    opacity: .25;
+}
+
+/* Personal and work data */
+.info_rec_l{
     position: fixed;
     top: 42vh;
     left: 14vw;
-    width: 58vw;
+    width: 28.5vw;
     height: 58vh;
     background-color: var(--dark);
     border-radius: 4px;
 }
+.info_title_l{
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    text-align: center;
+
+    left: 22vw;
+    top: 43vh;
+    z-index: 100;
+}
+
+.info_rec_r{
+    position: fixed;
+    top: 42vh;
+    left: 43.5vw;
+    width: 28.5vw;
+    height: 58vh;
+    background-color: var(--dark);
+    border-radius: 4px;
+}
+.info_title_r{
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    text-align: center;
+
+    left: 51vw;
+    top: 43vh;
+    z-index: 100;
+}
+
+/* History or something idk  ¯\_(ツ)_/¯*/
 .side_rec{
     position: fixed;
     top: 20vh;
@@ -84,7 +139,33 @@ body{
     background-color: var(--dark);
     border-radius: 4px;
 }
+.side_title{
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    text-align: center;
 
+    right: 14vw;
+    top: 21vh;
+    z-index: 100;
+}
+.side_ul{
+    position: fixed;
+    list-style-type: none;
+    padding: 0;
+    top: 26vh;
+    right: 16vw;
+    z-index: 100;
+}
+.side_li{
+    z-index: 100;
+    margin-top: 4px;
+    color: white;
+    font-size: 14px;
+    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
+    text-align: left;
+}
 
 /* Navigation! */
 .navigation{
@@ -145,11 +226,11 @@ body{
 .custom_a{
     text-decoration: none;
     color: rgb(153, 153, 153);
-    font-family: "Myriad Pro";
+    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
 }
 .cov{
     color: rgb(81, 153, 173);
-    font-family: "Myriad Pro";
+    font-family: "Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF";
 }
 
 .BrCr{
