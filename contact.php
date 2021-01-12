@@ -6,6 +6,7 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">    
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="contact.css">
+    <script src="contact.js"></script>
 
 
     <title>Επικοινωνία</title>
@@ -13,6 +14,7 @@
 
 <body>
 
+    <div class = "container">
         <div class="row">
                  <!-- navigation bar backround -->
             <div class="navigation">
@@ -58,7 +60,8 @@
                 </div>
             </div>
         </div>
-
+    </div>
+       
  
         <div class="row">
             <div class ="BrCr">
@@ -74,6 +77,8 @@
         <div class="row row-header">
             <h1 class="contact">Επικοινωνία</h1>
         </div>
+
+
 
         <div class="container vertical-center flex-center">
             <span class="square">
@@ -100,87 +105,91 @@
                     εξυπηρετηθούν τηλεφωνικά ή μέσω e-mail. </p>
                 <br>
                 <br>
-                <button type="button" class="btn btn-primary">Κλείστε ραντεβού</button>
+                <button type="button" class="btn btn-primary" onclick="myFunction()">Κλείστε ραντεβού</button>
             </span>       
         </div>
 
         <div class="container horizontal-center flex-center">
-            <span class="rectangle">
-
-            </span>
-        </div>
-
-        <div class="row row-content ">
-            <div class="horizontal-center">
-                <h3 class="white">Συμπληρώστε τα στοιχεία σας</h3>
-            </div>
-            <br>
-            <div class=" horizontal-center">
-                <form>
-                    <div class="form-group row">
-                        <label for="firstname" class="col-md-2 col-form-label">First Name</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="firstname" name="firstname"
-                                placeholder="First Name">
-                        </div>
+            <div id="rectangle" >
+                <div class="row row-content ">
+                    <div class="horizontal-center">
+                        <h3>Συμπληρώστε τα στοιχεία σας</h3>
                     </div>
-                    <div class="form-group row">
-                        <label for="lastname" class="col-md-2 col-form-label">Last Name</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="lastname" name="lastname"
-                                placeholder="Last Name">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
-                        <div class="col-5 col-sm-4 col-md-3">
-                            <div class="input-group">
-                                <div class="input-group-addon">(</div>
-                                <input type="tel" class="form-control" id="areacode" name="areacode"
-                                    placeholder="Area code">
-                                <div class="input-group-addon">)</div>
+                    <br>
+                    <div class=" horizontal-center">
+                        <form>
+                            <div class="form-group row">
+                                <label for="firstname" class="col-md-2 col-form-label">First Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="firstname" name="firstname"
+                                        placeholder="First Name">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-7 col-sm-6 col-md-7">
-                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
-                        </div>
+                            <div class="form-group row">
+                                <label for="lastname" class="col-md-2 col-form-label">Last Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="lastname" name="lastname"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
+                                <div class="col-5 col-sm-4 col-md-5">
+                                    <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
+                                </div>
+
+                            </div>
+                            <div class="form-group row">
+                                <label for="meeting" class="col-12 col-md-2 col-form-label">Ημερομηνία</label>
+                                <div class="col-5 col-sm-4 col-md-5">
+                                    <input type="date" class="form-control" id="meeting" name="meeting">
+                                </div>
+                                <div class="col-7 col-sm-6 col-md-5">
+                                    <div class="input-group">
+                                        <label for="appt" class="col-12 col-md-7 col-form-label">Select a time: </label>
+                                        <input type="time" class="form-control" id="appt" name="appt">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="emailid" class="col-md-2 col-form-label">Email</label>
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="telnum" class="col-12 col-md-2 col-form-label">Λόγος ραντεβού</label>
+                                <div class = "col-md-10">
+                                    <div class="form-check">
+                                            <select class="form-control">
+                                                <option>Λόγος 1</option>
+                                                <option>Λόγος 2</option>
+                                                <option>Λόγος 3</option>
+                                                <option>Λόγος 4</option>
+                                            </select>
+                                    </div>
+                                </div>
+
+                            <div class="form-group row">
+                                <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-md-2 col-md-10">
+                                    <button type="submit" class="btn btn-primary">Send Feedback</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group row">
-                        <label for="emailid" class="col-md-2 col-form-label">Email</label>
-                        <div class="col-md-10">
-                            <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
-                        </div>
+                    <div class="col-12 col-md">
                     </div>
-                    <div class="form-group row">
-                        <div class="form-check col-md-6 offset-md-2">
-                            <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" name="approve" value="">
-                                <strong>May we contact you?</strong>
-                            </label>
-                        </div>
-                        <div class="col-md-3 offset-md-1">
-                            <select class="form-control">
-                                <option>Tel.</option>
-                                <option>Email</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-primary">Send Feedback</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-md">
+                </div>
             </div>
         </div>
+
+       
 
 </body>
 
