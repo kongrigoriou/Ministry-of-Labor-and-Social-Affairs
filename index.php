@@ -31,7 +31,7 @@
                         <ul class="custom_ul">
                             <li class="custom_li"><a href="covid19.php" class="cov custom_a">Κορωνοϊός</a></li>
                             <li class="custom_li"><a class="custom_a" href="#help">Βοήθεια</a></li>
-                            <li class="custom_li"><a class="custom_a" href="test.php">Σύνδεση</a></li>
+                            <li class="custom_li"><a class="custom_a" href="log_in.php">Σύνδεση</a></li>
                         </ul>
                     </div>
     
