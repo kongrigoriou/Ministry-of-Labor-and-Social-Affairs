@@ -60,8 +60,18 @@
 
             <!-- User Interface -->
             <div class="profile">
-                <div class="pic">
+                <a href="./settings.php">
+                    <div class="edit_text">Επεξεργασία</div>
+                </a>
+                <div class="pic" >
                     <div class="overlay"></div>
+
+                    <label for="hidden">
+                        <img src="Assets/User/edit_picture.png" class="edit_pic">
+                    </label>
+
+                    <input id="hidden" type="file" accept="image/*"/>
+               
                 </div>
 
                 <div class="basic_info">

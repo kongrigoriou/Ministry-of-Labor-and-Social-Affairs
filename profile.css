@@ -40,6 +40,21 @@ body{
 
     font-size: large;
 }
+.edit_text{
+    mix-blend-mode: exclusion;
+    color: white;
+    opacity: 0.5;
+    position: fixed;
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
+    left: 66.5vw;
+    top: 22vh;
+    font-size: small;
+}
+.profile:hover .edit_text{
+    cursor: pointer;
+    opacity:1;
+}
+
 .basic_info{
     mix-blend-mode: exclusion;
     position: fixed;
@@ -59,6 +74,10 @@ body{
 }
 
 /* Pic suggest edit on hover */
+#hidden{
+    position: absolute;
+    left: -9999999px;
+}
 .pic{
     background: url("Assets/User/profile_picture.png");
     background-repeat: no-repeat;
@@ -84,6 +103,18 @@ body{
 }
 .pic:hover .overlay{
     opacity: .25;
+}
+
+.edit_pic{
+    position: fixed;
+    top: 34.9vh;
+    left: 14vw;
+    opacity: 0;
+    width: 10.2vw;
+}
+.pic:hover .edit_pic{
+    cursor: pointer;
+    opacity: 1;
 }
 
 /* Personal and work data */
