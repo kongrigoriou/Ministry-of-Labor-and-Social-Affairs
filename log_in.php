@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="log_in.css">
 
         <title>Σύνδεση</title>
+        <!-- include ajax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'</script>
         <script src="contact.js"></script>
 
     </head>
@@ -118,5 +120,36 @@
     </div>  
     
 </body>
+
+<script type="text/javascript">
+
+  function test(){
+
+    var email = document.getElementById("exampleInputEmail1").value;
+    var pass = document.getElementById("exampleInputPassword1").value;
+
+    //proceed if both variables have values 
+    if(email && pass){
+        // debug
+        console.log(email, pass);
+        // notify send request to the server using ajax
+        $.ajax({
+            url: 'log_in_function.php',
+            type: 'POST',
+            dataType: "json",
+            data: {
+                username: email,
+                password: pass
+            }
+        }).done(function(data){
+            alert(JSON.stringify(data));
+        });
+    // print error message
+    }else{
+        // notify the user
+        window.alert("Το πεδίο # είναι άδειο.");
+    }
+  }
+</script>
 
 </html>
