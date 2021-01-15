@@ -7,29 +7,11 @@
         <link rel="stylesheet" href="log_in.css">
 
         <title>Σύνδεση</title>
-        
+        <script src="contact.js"></script>
+
     </head>
 
 <body>
-    
-    <?php
-
-    /*** mysql hostname ***/
-    $hostname = 'localhost';
-
-    /*** mysql username ***/
-    $username = 'root';
-
-    try {
-        $dbh = new PDO("mysql:host=$hostname;dbname=mysql", $username);
-        /*** echo a message saying we have connected ***/
-        echo 'Connected to database';
-        }
-    catch(PDOException $e)
-        {
-        echo $e->getMessage();
-        }
-    ?>
 
     <!-- navbar -->
     <div class="row">
@@ -101,13 +83,14 @@
                 <h6 class="font-weight-light">Συνδεθείτε για να συνεχίσετε.</h6>
                 <form class="pt-3">
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" name="username">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password">
                   </div>
                   <div class="mt-3">
-                    <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">ΣΥΝΔΕΣΗ</a>
+                    <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test() href="index.php">ΣΥΝΔΕΣΗ</a> -->
+                    <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΣΥΝΔΕΣΗ</a>
                   </div>
                   <div class="my-2 d-flex justify-content-between align-items-center">
                     <div class="form-check">
@@ -125,8 +108,8 @@
         <!-- content-wrapper ends -->
       </div>
       <!-- page-body-wrapper ends -->
-    </div>
-
+    </div>  
+    
 </body>
 
 </html>

@@ -23,8 +23,8 @@
     color: white;
     font-size: 42px;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
-    left: 20vh;
-    top: 15vh;
+    left: 20vw;
+    top: 17vh;
     z-index: 100;
 }
 
@@ -87,17 +87,19 @@
 .extra{
     position: relative;
 
-    top: 180vh;
+    top: 187vh;
     left: 20vw;
     z-index: 100;
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
 }
 
 .employer{
 
     position: relative;
-    top: 100vh;
+    top: 95vh;
     left: 20vw;
     z-index: 100;
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
 }
 
 .employee{
@@ -106,14 +108,15 @@
     top: 120vh;
     left: 20vw;
     z-index: 100;
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
 }
 
 .case{
 
     position: relative;
 
-    top: 160vh;
+    top: 158vh;
     left: 20vw;
     z-index: 100;
-
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
 }
