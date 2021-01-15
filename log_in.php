@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="log_in.css">
 
         <title>Σύνδεση</title>
+        <!-- include ajax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'</script>
         <script src="contact.js"></script>
 
     </head>
@@ -67,7 +69,7 @@
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Κορωνοϊός</li>
+                        <li class="breadcrumb-item active" aria-current="page">Σύνδεση</li>
                     </ol>
                 </nav>
             </div>
@@ -83,14 +85,15 @@
                 <h6 class="font-weight-light">Συνδεθείτε για να συνεχίσετε.</h6>
                 <form class="pt-3">
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" name="username">
+                    <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" name="username">
                   </div>
                   <div class="form-group">
                     <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password">
                   </div>
                   <div class="mt-3">
                     <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test() href="index.php">ΣΥΝΔΕΣΗ</a> -->
-                    <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΣΥΝΔΕΣΗ</a>
+                    <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick="test()">ΣΥΝΔΕΣΗ</a>
+                    <!-- <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΣΥΝΔΕΣΗ</button> -->
                   </div>
                   <div class="my-2 d-flex justify-content-between align-items-center">
                     <div class="form-check">
@@ -111,5 +114,36 @@
     </div>  
     
 </body>
+
+<script type="text/javascript">
+
+  function test(){
+
+    var email = document.getElementById("exampleInputEmail1").value;
+    var pass = document.getElementById("exampleInputPassword1").value;
+
+    //proceed if both variables have values 
+    if(email && pass){
+        // debug
+        console.log(email, pass);
+        // notify send request to the server using ajax
+        $.ajax({
+            url: 'log_in_function.php',
+            type: 'POST',
+            dataType: "json",
+            data: {
+                username: email,
+                password: pass
+            }
+        }).done(function(data){
+            alert(JSON.stringify(data));
+        });
+    // print error message
+    }else{
+        // notify the user
+        window.alert("Το πεδίο # είναι άδειο.");
+    }
+  }
+</script>
 
 </html>
