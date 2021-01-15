@@ -65,15 +65,22 @@
 
     <!-- breadcrumbs -->
     <div class="row">
-            <div class ="BrCr">
-                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Σύνδεση</li>
-                    </ol>
-                </nav>
-            </div>
+      <div class ="BrCr">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Κορωνοϊός</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+        <!-- backround square -->
+        <div class="row">
+            <div class="square"></div>                    
         </div>
+    </div>
 
     <div class="container-scroller">
       <div class="container-fluid page-body-wrapper full-page-wrapper">
@@ -85,23 +92,22 @@
                 <h6 class="font-weight-light">Συνδεθείτε για να συνεχίσετε.</h6>
                 <form class="pt-3">
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" name="username">
+                    <input type="text" pattern=".{4,20}" required title="Length must be 4 to 20 characters." required class="form-control form-control-lg" id="exampleInputName1" placeholder="Όνομα Χρήστη" name="username">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password">
+                  <input type="password" pattern=".{8,20}" required title="Minimum 8 to 20 characters." class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Κωδικός Πρόσβασης" name="password">
                   </div>
                   <div class="mt-3">
                     <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test() href="index.php">ΣΥΝΔΕΣΗ</a> -->
-                    <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick="test()">ΣΥΝΔΕΣΗ</a>
-                    <!-- <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΣΥΝΔΕΣΗ</button> -->
+                    <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΣΥΝΔΕΣΗ</button>
                   </div>
                   <div class="my-2 d-flex justify-content-between align-items-center">
                     <div class="form-check">
                       <label class="form-check-label text-muted">
-                        <input type="checkbox" class="form-check-input"> Keep me signed in </label>
+                        <input type="checkbox" class="form-check-input"> Να παραμείνω συνδεδεμένος. </label>
                     </div>
                   </div>
-                  <div class="text-center mt-4 font-weight-light"> Δεν έχετε λογαριασμό; <a href="register.html" class="text-primary">Δημιουργία</a>
+                  <div class="text-center mt-4 font-weight-light"> Δεν έχετε λογαριασμό; <a href="register.php" class="text-primary">Δημιουργία</a>
                   </div>
                 </form>
               </div>
