@@ -1,0 +1,113 @@
+.page-body-wrapper {
+    min-height: calc(100vh - 70px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0; 
+}
+.page-body-wrapper.full-page-wrapper {
+    width: 100%;
+    min-height: 100vh; 
+}
+
+.content-wrapper {
+    padding: 2.75rem 2.25rem;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; 
+}
+
+/* Auth */
+.auth .auth-form-light {
+    background: #ffffff; 
+    border-radius:  10px;
+}
+.auth .auth-form-light select {
+    color: #c9c8c8; 
+}
+.auth .auth-form-light .input-group .form-control:focus, .auth .auth-form-light .input-group .form-control:active {
+    border-color: #ebedf2; 
+}
+  
+.auth .brand-logo {
+margin-bottom: 2rem; 
+}
+.auth .brand-logo img {
+    width: 150px; 
+}
+  
+.auth form .form-group {
+    margin-bottom: 1.5rem; 
+}
+.auth form .form-group label {
+    font-size: .8125rem; 
+}
+.auth form .form-group .form-control {
+    background: transparent;
+    border-radius: 0;
+    font-size: .9375rem; 
+}
+  
+.auth form .auth-form-btn {
+    height: 50px;
+    line-height: 1.5; 
+}
+  
+.auth form .auth-link {
+    font-size: 0.875rem; 
+}
+
+.auth form .auth-link:hover {
+      color: initial; 
+}
+
+.text-left {
+    text-align: left !important; 
+}
+
+/* size override */
+.row{
+    width: 100vw;
+}
+
+.col-lg-4{
+    width: fit-content;
+}
+
+.col-lg-5{
+    top: 7vh;
+}
+
+.btn-block {
+    display: block;
+    width: 100%; 
+}
+
+.btn-gradient-primary{
+    background: rgba(0, 0, 0, .50);
+    border: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.btn-gradient-primary:not([disabled]):not(.disabled):active, .btn-gradient-primary:not([disabled]):not(.disabled).active,
+.show > .btn-gradient-primary.dropdown-toggle {
+    background: -webkit-gradient(linear, left top, right top, from(rgb(89, 151, 175)), to(skyblue));
+    background: linear-gradient(to right, rgb(89, 151, 175), skyblue);
+}
+
+.btn-gradient-primary:hover{
+    opacity: .8;
+}
+.btn-gradient-primary:not(.btn-gradient-light) {
+    color: #ffffff;
+}
+.btn-gradient-primary:not(.btn-gradient-light):hover, .btn-gradient-primary:not(.btn-gradient-light):focus, .btn-gradient-primary:not(.btn-gradient-light):active {
+    color: #ffffff;
+}
