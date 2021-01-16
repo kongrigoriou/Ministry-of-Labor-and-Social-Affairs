@@ -11,8 +11,7 @@ body{
     color: white;
     font-size: 42px;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
-    left: 20vw;
-    top: 20vh;
+    top: 20vh; 
     z-index: 100;
 }
 
@@ -20,9 +19,9 @@ body{
   display: inline-block;
   width: 350px;
   height: 350px;
-  padding: 0px;
+  padding: 10px;
   /* border: 1px solid blue;     */
-  background-color: rgba(255, 255, 255, 0.856); 
+  background-color: rgba(0, 0, 0, 0.5); 
   position: relative;
   /* top: 400px;
   left: 50px; */
@@ -59,9 +58,54 @@ body{
   width: 1300px;
   height: 750px;
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.856); 
+  background-color: rgba(0, 0, 0, 0.5); 
   position: static;
   text-align: center;
 }
 
+.rectangle2{
+  display: block;
+  width: 1060px;
+  height: 150px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  position: relative;
+  text-align: center;
+  top: 20vh;
+}
+
+/* text backround */
+.square2{
+
+  position: fixed;
+
+  display: inline-block;
+  width: 80vw;
+  height: 100vh;
+
+  /* opacity */
+  background: rgba(0, 0, 0, 0.5);
+
+  top: 0vh;
+  left: 10vw;
+  right: 10vw;
+
+  text-align: left;
+
+  z-index: 0;
+}
+
+.buttongr {
+  background-color: #e7e7e7; 
+  color: black;
+}
+
+a.button:hover{
+  background: skyblue;
+}
+
+.button2 {
+  background-color: #5cac58; 
+  color: rgb(255, 255, 255);
+}
 
