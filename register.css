@@ -23,6 +23,26 @@
     flex-grow: 1; 
 }
 
+/* Background */
+.square{
+    position: fixed;
+
+    display: inline-block;
+    width: 80vw;
+    height: 100vh;
+
+    /* opacity */
+    background: rgba(0, 0, 0, 0.5);
+
+    top: 0vh;
+    left: 10vw;
+    right: 10vw;
+
+    text-align: left;
+
+    z-index: 0;
+}
+
 /* Auth */
 .auth .auth-form-light {
     background: #ffffff; 

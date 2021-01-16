@@ -3,8 +3,8 @@
 <head>
     <!-- Connect css file -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">    
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="leave.css">
 
@@ -72,62 +72,55 @@
                             <!-- progressbar -->
                             <ul id="progressbar" class="myriad">
                                 <li class="active myriad" id="account"><strong>Προσωπικά Στοιχεία</strong></li>
-                                <li id="personal"><strong>Personal</strong></li>
-                                <li id="payment"><strong>Payment</strong></li>
-                                <li id="confirm"><strong>Finish</strong></li>
+                                <li id="personal"><strong>Αιτιολόγηση Άδειας</strong></li>
+                                <li id="payment"><strong>Στοιχεία Άδειας</strong></li>
+                                <li id="confirm"><strong>Ολοκλήρωση</strong></li>
                             </ul> <!-- fieldsets -->
                             <fieldset>
                                 <div class="form-card">
-                                    <h2 class="fs-title myriad">Account Information</h2> <input type="email" name="email" placeholder="Email Id" class="myriad" /> <input type="text" name="uname" placeholder="UserName" /> <input type="password" name="pwd" placeholder="Password" /> <input type="password" name="cpwd" placeholder="Confirm Password" />
-                                </div> <input type="button" name="next" class="next action-button myriad" value="Next Step" />
+                                    <h2 class="fs-title myriad">Προσωπικά Στοιχεία</h2> <input type="text" name="fname" placeholder="Όνομα" required/> <input type="text" name="lname" placeholder="Επίθετο" required/> <input type="text" name="phno" placeholder="Πατρώνυμο" required/> <input type="text" name="phno_2" placeholder="ΑΜΑ" required/>
+                                </div> <input type="button" name="next" class="next action-button myriad" value="Επόμενο" />
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
-                                    <h2 class="fs-title">Personal Information</h2> <input type="text" name="fname" placeholder="First Name" /> <input type="text" name="lname" placeholder="Last Name" /> <input type="text" name="phno" placeholder="Contact No." /> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
-                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next Step" />
+                                    <h2 class="fs-title">Αιτιολόγηση Άδειας</h2>
+                                    <h3 class="fs-subtitle">Παρακαλώ επιλέξτε τις επιλογές που σας αντιπροσωπεύουν.</h2>
+
+                                    <input type="checkbox" id="cat1" name="cat1" value="" style="float: left;" required>
+                                    <label for="cat1">Γονέας παιδιών εγγεγραμένα σε βρεφικούς, βρεφονηπιακούς και παιδικούς σταθμούς.</label>
+
+                                    <input type="checkbox" id="cat2" name="cat2" value="" required>
+                                    <label for="cat2">Γονέας παιδιών που φοιτούν σε σχολικές μονάδες υποχρεωτικής εκπαίδευσης.</label>
+
+                                    <input type="checkbox" id="cat3" name="cat3" value="" required>
+                                    <label for="cat3">Γονέας παιδιών που φοιτούν σε ειδικά σχολεία ή σχολικές μονάδες ειδικής αγωγής.</label>
+
+                                    <input type="checkbox" id="cat4" name="cat4" value="" required>
+                                    <label for="cat4">Γονέας ατόμων με αναπηρία.</label>
+                                    <!--
+                                    <input type="text" name="fname" placeholder="Όνομα" required/> <input type="text" name="lname" placeholder="Επίθετο" required/> <input type="text" name="phno" placeholder="Πατρώνυμο" required/> <input type="text" name="phno_2" placeholder="ΑΜΑ" required/>
+                                    -->
+                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Προηγούμενο" /> <input type="button" name="next" class="next action-button" value="Επόμενο" />
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
-                                    <h2 class="fs-title">Payment Information</h2>
-                                    <div class="radio-group">
-                                        <div class='radio' data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></div>
-                                        <div class='radio' data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></div> <br>
-                                    </div> <label class="pay">Card Holder Name*</label> <input type="text" name="holdername" placeholder="" />
-                                    <div class="row">
-                                        <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" placeholder="" /> </div>
-                                        <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" placeholder="***" /> </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
-                                        <div class="col-9"> <select class="list-dt" id="month" name="expmonth">
-                                                <option selected>Month</option>
-                                                <option>January</option>
-                                                <option>February</option>
-                                                <option>March</option>
-                                                <option>April</option>
-                                                <option>May</option>
-                                                <option>June</option>
-                                                <option>July</option>
-                                                <option>August</option>
-                                                <option>September</option>
-                                                <option>October</option>
-                                                <option>November</option>
-                                                <option>December</option>
-                                            </select> <select class="list-dt" id="year" name="expyear">
-                                                <option selected>Year</option>
-                                            </select> </div>
-                                    </div>
-                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
+                                    <h2 class="fs-title">Στοιχεία Άδειας</h2>
+                                    <input type="number" name="amt_days" placeholder="Πλήθος Ημερών" required>
+                                    <input placeholder="Από" class="textbox-n" type="text" onfocus="(this.type='date')" id="date" required>
+                                    <input placeholder="Έως" class="textbox-n" type="text" onfocus="(this.type='date')" id="date" required>
+                                   
+                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Προηγούμενο" /> <input type="button" name="next" class="next action-button" value="Επόμενο" />
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
-                                    <h2 class="fs-title text-center">Success !</h2> <br><br>
+                                    <h2 class="fs-title text-center">Επιτυχία !</h2> <br><br>
                                     <div class="row justify-content-center">
                                         <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
                                     </div> <br><br>
                                     <div class="row justify-content-center">
                                         <div class="col-7 text-center">
-                                            <h5>You Have Successfully Signed Up</h5>
+                                            <h6>Η Άδεια Ειδικού Σκοπού έχει υποβληθεί επιτυχώς, και βρίσκεται σε επεξεργασία</h6>
+                                            <h6>Σύντομ θα ενημερωθείτε για την εξέλιξή της.</h6>
                                         </div>
                                     </div>
                                 </div>
