@@ -20,7 +20,7 @@
     $pw = '1234';
 
     //connect to the database
-    $conn = new mysqli('localhost', 'root', '', 'test');
+    $conn = new mysqli('localhost', 'root', '1234', 'eam3');
     if ($conn->connect_error){
         $error = false;
         echo $error;

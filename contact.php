@@ -74,13 +74,32 @@
             </div>
         </div>
 
-        <div class="row row-header">
-            <h1 class="contact">Επικοινωνία</h1>
+        <div class = "square2"></div>
+
+        <div class="container horizontal-center flex-center white">
+            <div class = "rectangle2">
+                <h5 style = "color: red"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+</svg> Σημαντικό</h5>
+                <p>Λόγω κορωνοϊού τα νέα ωράρια λειτουργείας του υπουργείου είναι: Δευτέρα - Παρασκευή 8:30 - 15:00.</p>
+                <p>Η εξυπηρέτηση του κοινού πραγματοποιείται τηλεφωνικά ή μέσω e-mail. <br>
+                    Για ελάχιστες περιπτώσεις πραγματοποιούνται ραντεβού με όλα τα απαραίτητα μέτρα προστασίας.</p>
+            </div>
+        </div>
+
+        <div class= "container">
+            <div class="row row-header align-items-center">
+                <div class="col-sm-4 col-md-3">
+                    <h1 class="contact">Επικοινωνία</h1>
+                </div>
+                
+            </div>
         </div>
 
 
 
-        <div class="container vertical-center flex-center">
+        <div class="container vertical-center flex-center white">
             <span class="square">
                 <h3>E-mail</h3>
                 
@@ -105,37 +124,37 @@
                     εξυπηρετηθούν τηλεφωνικά ή μέσω e-mail. </p>
                 <br>
                 <br>
-                <button type="button" class="btn btn-primary" onclick="myFunction()">Κλείστε ραντεβού</button>
+                <a href = "#meet"><button type="button" class="btn btn-primary buttongr" onclick="myFunction()">Κλείστε ραντεβού</button></a>
             </span>       
         </div>
 
-        <div class="container horizontal-center flex-center">
+        <div class="container horizontal-center flex-center white">
             <div id="rectangle" >
-                <div class="row row-content ">
+                <div class="row row-content" id = "meet">
                     <div class="horizontal-center">
                         <h3>Συμπληρώστε τα στοιχεία σας</h3>
                     </div>
                     <br>
-                    <div class=" horizontal-center">
+                    <div >
                         <form>
                             <div class="form-group row">
-                                <label for="firstname" class="col-md-2 col-form-label">First Name</label>
+                                <label for="firstname" class="control-label col-sm-2">Όνομα</label>
                                 <div class="col-md-10">
                                     <input type="text" class="form-control" id="firstname" name="firstname"
-                                        placeholder="First Name">
+                                        placeholder="Όνομα">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="lastname" class="col-md-2 col-form-label">Last Name</label>
+                                <label for="lastname" class="control-label col-sm-2">Επίθετο</label>
                                 <div class="col-md-10">
                                     <input type="text" class="form-control" id="lastname" name="lastname"
-                                        placeholder="Last Name">
+                                        placeholder="Επίθετο">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
+                                <label for="telnum" class="control-label col-sm-2">Τηλέφωνο</label>
                                 <div class="col-5 col-sm-4 col-md-5">
-                                    <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
+                                    <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Τηλέφωνο">
                                 </div>
 
                             </div>
@@ -144,12 +163,16 @@
                                 <div class="col-5 col-sm-4 col-md-5">
                                     <input type="date" class="form-control" id="meeting" name="meeting">
                                 </div>
-                                <div class="col-7 col-sm-6 col-md-5">
+                                <!-- <div class="col-7 col-sm-6 col-md-5">
                                     <div class="input-group">
-                                        <label for="appt" class="col-12 col-md-7 col-form-label">Select a time: </label>
+                                        <label for="appt" class="col-12 col-md-7 col-form-label">Ώρα</label>
                                         <input type="time" class="form-control" id="appt" name="appt">
                                     </div>
-                                </div>
+                                </div> -->
+                                    <label for="example-time-input" class="col-2 col-form-label">Time</label>
+                                    <div class="col-3">
+                                        <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+                                    </div>
                             </div>
                             <div class="form-group row">
                                 <label for="emailid" class="col-md-2 col-form-label">Email</label>
@@ -171,14 +194,16 @@
                                 </div>
 
                             <div class="form-group row">
-                                <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                                <label for="feedback" class="col-md-2 col-form-label">Σχόλια</label>
                                 <div class="col-md-10">
-                                    <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+                                    <textarea class="form-control" id="feedback" name="feedback" rows="5" placeholder="(Προαιρετικά)"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary">Send Feedback</button>
+                                    <button type="submit" class="btn btn-primary button2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+</svg>Υποβολή</button>
                                 </div>
                             </div>
                         </form>

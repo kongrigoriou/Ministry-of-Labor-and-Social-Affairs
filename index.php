@@ -1,4 +1,20 @@
 <!DOCTYPE html>
+
+<!-- initialize php session -->
+<?php
+
+    //start the session
+    session_start();
+    //initialize the global variables
+    if(!isset($_SESSION['logged_in'])){
+        $_SESSION['logged_in'] = '0';
+        $_SESSION['user_name'] = 'None';
+        $_SESSION['username'] = 'None';
+        $_SESSION['password'] = 1;
+    }
+
+?>
+
 <html lang="en" xml:lang="gr">
     <head>
         <!-- Connect css file -->
@@ -31,7 +47,23 @@
                         <ul class="custom_ul">
                             <li class="custom_li"><a href="covid19.php" class="cov custom_a">Κορωνοϊός</a></li>
                             <li class="custom_li"><a class="custom_a" href="test.php">Βοήθεια</a></li>
-                            <li class="custom_li"><a class="custom_a" href="log_in.php">Σύνδεση</a></li>
+                            <!-- IF THE USER IS LOGGED-IN -->
+                            <?php
+                                if ($_SESSION["logged_in"] == '1'){
+                            ?>
+                                    <li class="custom_li"><a class="custom_a" href="profile.php">Προφίλ</a></li>
+                            <?php
+                                }
+                            ?>
+                            
+                            <?php
+                                if ($_SESSION["logged_in"] == '0'){
+                            ?>
+                                    <li class="custom_li"><a class="custom_a" href="log_in.php">Σύνδεση</a></li>
+                            <?php
+                                }
+                            ?>
+
                         </ul>
                     </div>
     
