@@ -132,3 +132,6 @@ margin-bottom: 2rem;
     color: #ffffff;
 }
 
+.warning{
+    color: red !important;
+}
