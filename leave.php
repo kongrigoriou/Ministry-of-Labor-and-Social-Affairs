@@ -4,7 +4,10 @@
     <!-- Connect css file -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    
+    
+    <script src="https://kit.fontawesome.com/704af8b0cd.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="leave.css">
 
@@ -78,8 +81,14 @@
                             </ul> <!-- fieldsets -->
                             <fieldset>
                                 <div class="form-card">
-                                    <h2 class="fs-title myriad">Προσωπικά Στοιχεία</h2> <input type="text" name="fname" placeholder="Όνομα" required/> <input type="text" name="lname" placeholder="Επίθετο" required/> <input type="text" name="phno" placeholder="Πατρώνυμο" required/> <input type="text" name="phno_2" placeholder="ΑΜΑ" required/>
-                                </div> <input type="button" name="next" class="next action-button myriad" value="Επόμενο" />
+                                    <h2 class="fs-title myriad">Προσωπικά Στοιχεία</h2>
+                                    <input type="text" name="fname" placeholder="Όνομα" required/>
+                                    <input type="text" name="lname" placeholder="Επίθετο" required/>
+                                    <input type="text" name="phno" placeholder="Πατρώνυμο" required/>
+                                    <input type="number" name="phno_2" placeholder="ΑΜΑ" required/>
+
+                                </div>
+                                <input type="button" name="next" class="next action-button myriad" value="Εμπρός" />
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
@@ -100,7 +109,8 @@
                                     <!--
                                     <input type="text" name="fname" placeholder="Όνομα" required/> <input type="text" name="lname" placeholder="Επίθετο" required/> <input type="text" name="phno" placeholder="Πατρώνυμο" required/> <input type="text" name="phno_2" placeholder="ΑΜΑ" required/>
                                     -->
-                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Προηγούμενο" /> <input type="button" name="next" class="next action-button" value="Επόμενο" />
+                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Πίσω" />
+                                    <input type="button" name="next" class="next action-button" value="Εμπρός" />
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
@@ -109,7 +119,8 @@
                                     <input placeholder="Από" class="textbox-n" type="text" onfocus="(this.type='date')" id="date" required>
                                     <input placeholder="Έως" class="textbox-n" type="text" onfocus="(this.type='date')" id="date" required>
                                    
-                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Προηγούμενο" /> <input type="button" name="next" class="next action-button" value="Επόμενο" />
+                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Πίσω" />
+                                    <input type="button" onclick="myRedirect()" name="next" class="next action-button" value="Εμπρός"/>
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
@@ -120,7 +131,9 @@
                                     <div class="row justify-content-center">
                                         <div class="col-7 text-center">
                                             <h6>Η Άδεια Ειδικού Σκοπού έχει υποβληθεί επιτυχώς, και βρίσκεται σε επεξεργασία</h6>
-                                            <h6>Σύντομ θα ενημερωθείτε για την εξέλιξή της.</h6>
+                                            <h6>Σύντομα θα ενημερωθεί ο εργόδοτης σας, για την έγκριση ή απόρριψή της.</h6> <br>
+
+                                            <h8>Θα ανακατευθυνθείτε στην αρχική σελίδα σε λίγα δευτερόλεπτα.</h8>
                                         </div>
                                     </div>
                                 </div>
