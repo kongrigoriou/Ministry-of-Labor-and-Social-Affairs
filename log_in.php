@@ -90,16 +90,15 @@
               <div class="auth-form-light text-left p-5">
                 <h4>Καλώς ήλθατε</h4>
                 <h6 class="font-weight-light">Συνδεθείτε για να συνεχίσετε.</h6>
-                <form class="pt-3">
+                <form class="pt-3" action="log_in_function.php" method="POST">
                   <div class="form-group">
-                    <input type="text" pattern=".{4,20}" required title="Length must be 4 to 20 characters." required class="form-control form-control-lg" id="exampleInputName1" placeholder="Όνομα Χρήστη" name="username">
+                    <input type="text" pattern=".{4,20}" required title="Length must be 4 to 20 characters." required class="form-control form-control-lg" id="username" placeholder="Όνομα Χρήστη" name="username">
                   </div>
                   <div class="form-group">
-                  <input type="password" pattern=".{8,20}" required title="Minimum 8 to 20 characters." class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Κωδικός Πρόσβασης" name="password">
+                  <input type="password" pattern=".{4,20}" required title="Minimum 4 to 20 characters." class="form-control form-control-lg" id="password" placeholder="Κωδικός Πρόσβασης" name="password">
                   </div>
                   <div class="mt-3">
-                    <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test() href="index.php">ΣΥΝΔΕΣΗ</a> -->
-                    <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΣΥΝΔΕΣΗ</button>
+                    <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" id="btn" value="Login">ΣΥΝΔΕΣΗ</button>
                   </div>
                   <div class="my-2 d-flex justify-content-between align-items-center">
                     <div class="form-check">
@@ -120,36 +119,5 @@
     </div>  
     
 </body>
-
-<script type="text/javascript">
-
-  function test(){
-
-    var email = document.getElementById("exampleInputEmail1").value;
-    var pass = document.getElementById("exampleInputPassword1").value;
-
-    //proceed if both variables have values 
-    if(email && pass){
-        // debug
-        console.log(email, pass);
-        // notify send request to the server using ajax
-        $.ajax({
-            url: 'log_in_function.php',
-            type: 'POST',
-            dataType: "json",
-            data: {
-                username: email,
-                password: pass
-            }
-        }).done(function(data){
-            alert(JSON.stringify(data));
-        });
-    // print error message
-    }else{
-        // notify the user
-        window.alert("Το πεδίο # είναι άδειο.");
-    }
-  }
-</script>
 
 </html>
