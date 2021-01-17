@@ -8,6 +8,7 @@
     //initialize the global variables
     if(!isset($_SESSION['logged_in'])){
         $_SESSION['logged_in'] = '0';
+        $_SESSION['wrong_input'] = '0';
         $_SESSION['user_name'] = 'None';
         $_SESSION['username'] = 'None';
         $_SESSION['password'] = 1;

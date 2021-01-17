@@ -38,6 +38,7 @@ if($row['USERNAME'] == $username && $row['PASSWORD'] == $password){
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
     $_SESSION['logged_in'] = '1';
+    $_SESSION['wrong_input'] = '0';
 
     //redirect to home page
     header('Location: index.php');
@@ -45,6 +46,11 @@ if($row['USERNAME'] == $username && $row['PASSWORD'] == $password){
 }else {
     echo "Login failed";
     //redirect to log-in page
+    //update global variable
+    $_SESSION['wrong_input'] = '1';
+    $_SESSION['username'] = 'None';
+    $_SESSION['password'] = 'None';
+    $_SESSION['logged_in'] = '0';
     header('Location: log_in.php');
 }
 
