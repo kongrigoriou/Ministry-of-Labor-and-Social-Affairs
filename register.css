@@ -131,3 +131,15 @@ margin-bottom: 2rem;
 .btn-gradient-primary:not(.btn-gradient-light):hover, .btn-gradient-primary:not(.btn-gradient-light):focus, .btn-gradient-primary:not(.btn-gradient-light):active {
     color: #ffffff;
 }
+
+.error{
+
+    width: 92%;
+    margin: 0px auto;
+    padding: 7px;
+    border: 1px solid red;
+    color: red;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: left;
+}
