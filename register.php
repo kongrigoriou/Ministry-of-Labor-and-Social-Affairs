@@ -84,38 +84,44 @@
               <div class="auth-form-light text-left p-5">
                 <h4>Δημιουργία λογαριασμού</h4>
                 <h6 class="font-weight-light">Συμπληρώστε τα παρακάτω στοιχεία.</h6>
-                <form class="pt-3">
+                <form class="pt-3" action="register_function.php" method="POST">
                     <div class="form-group">
-                        <input type="text" pattern=".{4,20}" required title="Length must be 4 to 20 characters." required class="form-control form-control-lg" id="exampleInputName1" placeholder="Όνομα Χρήστη" name="username">
+                        <input type="text" pattern=".{4,20}" required title="Length must be 4 to 20 characters." required class="form-control form-control-lg" id="username" placeholder="Όνομα Χρήστη" name="username">
                     </div>
                     <div class="form-group">
-                        <input type="text" pattern=".{2,20}" required title="Length must be 2 to 20 characters." required class="form-control form-control-lg" id="exampleInputName2" placeholder="Όνομα" name="Name">
+                        <input type="text" pattern=".{2,20}" required title="Length must be 2 to 20 characters." required class="form-control form-control-lg" id="name" placeholder="Όνομα" name="name">
                     </div>
                     <div class="form-group">
-                        <input type="text" pattern=".{2,20}" required title="Length must be 2 to 20 characters." required class="form-control form-control-lg" id="exampleInputName3" placeholder="Επίθετο" name="Surname">
+                        <input type="text" pattern=".{2,20}" required title="Length must be 2 to 20 characters." required class="form-control form-control-lg" id="surname" placeholder="Επίθετο" name="surname">
                     </div>
                     <div class="form-group">
-                        <input type="text" pattern="\d*" minlength="11" maxlength="11" required title="Length must 11 characters." class="form-control form-control-lg" id="exampleInputAMA" placeholder="Αριθμός Μητρώου Ασφαλισμένου" name="AMA">
+                        <input type="text" pattern="\d*" minlength="9" maxlength="9" required title="Length must be 9 characters" required class="form-control form-control-lg" id="AFM" placeholder="ΑΦΜ" name="AFM">
                     </div>
                     <div class="form-group">
-                        <input type="text" pattern=".{2,20}" required title="Length must be 2 to 20 characters." required class="form-control form-control-lg" id="exampleInputGender" placeholder="Φύλο" name="Gender">
+                        <input type="text" pattern="\d*" minlength="11" maxlength="11" required title="Length must 11 characters." class="form-control form-control-lg" id="AMA" placeholder="Αριθμός Μητρώου Ασφαλισμένου" name="AMA">
                     </div>
                     <div class="form-group">
-                        <input type="email" pattern=".{5,30}" required title="Length must be 5 to 30 characters." required class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Ηλ. Ταχυδρομείο" name="username">
+                        <input type="text" pattern=".{2,20}" required title="Length must be 2 to 20 characters." required class="form-control form-control-lg" id="gender" placeholder="Φύλο" name="gender">
                     </div>
                     <div class="form-group">
-                        <input type="password" pattern=".{8,20}" required title="Minimum 8 to 20 characters." class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Κωδικός Πρόσβασης" name="password">
+                        <input type="email" pattern=".{5,30}" required title="Length must be 5 to 30 characters." required class="form-control form-control-lg" id="email" placeholder="Ηλ. Ταχυδρομείο" name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" pattern="\d*" minlength="9" maxlength="9" required title="Length must be 5 to 30 characters." required class="form-control form-control-lg" id="company_AFM" placeholder="ΑΦΜ Εταιρίας" name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" pattern=".{4,20}" required title="Minimum 4 to 20 characters." class="form-control form-control-lg" id="password" placeholder="Κωδικός Πρόσβασης" name="password">
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+                        <input class="form-check-input" type="radio" name="radio" value="employee" id="flexRadioDefault1" required>
                         <label class="form-check-label" for="flexRadioDefault1">
                             Είμαι Εργαζόμενος
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required>
+                        <input class="form-check-input" type="radio" name="radio" value="employer" id="flexRadioDefault2">
                         <label class="form-check-label" for="flexRadioDefault2">
                             Είμαι Εργοδότης
                         </label>
@@ -133,7 +139,7 @@
                     <div class="mt-3">
                         <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test() href="index.php">ΣΥΝΔΕΣΗ</a> -->
                         <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΕΓΓΡΑΦΗ</a> -->
-                        <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΕΓΓΡΑΦΗ</button>
+                        <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">ΕΓΓΡΑΦΗ</button>
                     </div>
                 </form>
               </div>
