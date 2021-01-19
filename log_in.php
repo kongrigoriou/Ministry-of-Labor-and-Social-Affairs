@@ -117,7 +117,7 @@
                       if ($_SESSION["wrong_input"] == '1'){
                   ?>
                           <div class="text center mt-4 warning">
-                            <p class="warning">Λανθασμένο όνομα χρήστη ή κωδικός.</p>
+                            <p class="warning"><b>Λανθασμένο όνομα χρήστη ή κωδικός.</b></p>
                           </div>
                   <?php
                       $_SESSION["wrong_input"] = '0';

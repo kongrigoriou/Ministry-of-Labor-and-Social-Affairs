@@ -1,3 +1,6 @@
+<?php include('register_function.php'); ?> 
+
+<!DOCTYPE html>
 <html lang="en" xml:lang="gr">
     <head>
         <!-- Connect css file -->
@@ -84,7 +87,9 @@
               <div class="auth-form-light text-left p-5">
                 <h4>Δημιουργία λογαριασμού</h4>
                 <h6 class="font-weight-light">Συμπληρώστε τα παρακάτω στοιχεία.</h6>
-                <form class="pt-3" action="register_function.php" method="POST">
+                <form class="pt-3" action="register.php" method="POST">
+                    <!-- display errors at the top -->
+                    <?php include('errors.php'); ?>
                     <div class="form-group">
                         <input type="text" pattern=".{4,20}" required title="Length must be 4 to 20 characters." required class="form-control form-control-lg" id="username" placeholder="Όνομα Χρήστη" name="username">
                     </div>
@@ -107,7 +112,7 @@
                         <input type="email" pattern=".{5,30}" required title="Length must be 5 to 30 characters." required class="form-control form-control-lg" id="email" placeholder="Ηλ. Ταχυδρομείο" name="email">
                     </div>
                     <div class="form-group">
-                        <input type="text" pattern="\d*" minlength="9" maxlength="9" required title="Length must be 5 to 30 characters." required class="form-control form-control-lg" id="company_AFM" placeholder="ΑΦΜ Εταιρίας" name="email">
+                        <input type="text" pattern="\d*" minlength="9" maxlength="9" required title="Length must be 5 to 30 characters." required class="form-control form-control-lg" id="company_AFM" placeholder="ΑΦΜ Εταιρίας" name="company_AFM">
                     </div>
                     <div class="form-group">
                         <input type="password" pattern=".{4,20}" required title="Minimum 4 to 20 characters." class="form-control form-control-lg" id="password" placeholder="Κωδικός Πρόσβασης" name="password">
@@ -139,7 +144,7 @@
                     <div class="mt-3">
                         <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test() href="index.php">ΣΥΝΔΕΣΗ</a> -->
                         <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΕΓΓΡΑΦΗ</a> -->
-                        <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">ΕΓΓΡΑΦΗ</button>
+                        <button type="submit" name ="register" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">ΕΓΓΡΑΦΗ</button>
                     </div>
                 </form>
               </div>
