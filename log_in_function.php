@@ -39,7 +39,7 @@ if($row['USERNAME'] == $username && $row['PASSWORD'] == $password){
     $_SESSION['password'] = $password;
     $_SESSION['logged_in'] = '1';
     $_SESSION['wrong_input'] = '0';
-
+    $_SESSION['AFM'] = $row['AFM'];
     //redirect to home page
     header('Location: index.php');
 
