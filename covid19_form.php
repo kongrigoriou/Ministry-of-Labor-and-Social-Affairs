@@ -1,6 +1,11 @@
-<?php include('register_function.php'); ?> 
-
+<?php include('covid19_form_function.php'); ?> 
 <!DOCTYPE html>
+
+<!-- start session -->
+<?php
+  session_start()
+?>
+
 <html lang="en" xml:lang="gr">
     <head>
         <!-- Connect css file -->
@@ -9,8 +14,7 @@
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="register.css">
 
-        <title>Εγγραφή</title>
-        <script src="contact.js"></script>
+        <title>Σύμβαση Εργασίας</title>
 
     </head>
 
@@ -70,7 +74,8 @@
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Δημιουργία Λογαριασμού</li>
+                        <li class="breadcrumb-item"><a href="register.php">Προφίλ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Σύμβαση Εργασίας</li>
                     </ol>
                 </nav>
             </div>
@@ -85,54 +90,45 @@
           <div class="row flex-grow">
             <div class="col-lg-5 mx-auto">
               <div class="auth-form-light text-left p-5">
-                <h4>Δημιουργία λογαριασμού</h4>
-                <h6 class="font-weight-light">Συμπληρώστε τα παρακάτω στοιχεία.</h6>
-                <form class="pt-3" action="register.php" method="POST">
+                <h4>Δήλωση Εργασίας</h4>
+                <h6 class="font-weight-light">Συμπληρώστε τα στοιχεία του εργαζόμενου.</h6>
+                <form class="pt-3" action="covid19_form.php" method="POST">
                     <!-- display errors at the top -->
                     <?php include('errors.php'); ?>
                     <div class="form-group">
-                        <input type="text" pattern=".{4,20}" required title="Length must be 4 to 20 characters." required class="form-control form-control-lg" id="username" placeholder="Όνομα Χρήστη" name="username">
+                        <input type="text" pattern=".{4,20}" required title="Length must be 4 to 20 characters." required class="form-control form-control-lg" id="company_name" placeholder="Επωνυμία Εταιρίας" name="company_name">
                     </div>
                     <div class="form-group">
-                        <input type="text" pattern=".{2,20}" required title="Length must be 2 to 20 characters." required class="form-control form-control-lg" id="name" placeholder="Όνομα" name="name">
+                        <input type="text" pattern="\d*" minlength="9" maxlength="9" required title="Length must be 9 characters." required class="form-control form-control-lg" id="company_AFM" placeholder="ΑΦΜ Εταιρίας" name="company_AFM">
                     </div>
                     <div class="form-group">
-                        <input type="text" pattern=".{2,20}" required title="Length must be 2 to 20 characters." required class="form-control form-control-lg" id="surname" placeholder="Επίθετο" name="surname">
+                        <input type="text" pattern="\d*" minlength="9" maxlength="9" required title="Length must be 9 characters." required class="form-control form-control-lg" id="employer_AFM" placeholder="ΑΦΜ Εργαζόμενου" name="employee_AFM">
                     </div>
                     <div class="form-group">
-                        <input type="text" pattern="\d*" minlength="9" maxlength="9" required title="Length must be 9 characters" required class="form-control form-control-lg" id="AFM" placeholder="ΑΦΜ" name="AFM">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" pattern="\d*" minlength="11" maxlength="11" required title="Length must 11 characters." class="form-control form-control-lg" id="AMA" placeholder="Αριθμός Μητρώου Ασφαλισμένου" name="AMA">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" pattern=".{2,20}" required title="Length must be 2 to 20 characters." required class="form-control form-control-lg" id="gender" placeholder="Φύλο" name="gender">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" pattern=".{5,30}" required title="Length must be 5 to 30 characters." required class="form-control form-control-lg" id="email" placeholder="Ηλ. Ταχυδρομείο" name="email">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" pattern="\d*" minlength="9" maxlength="9" required title="Length must be 5 to 30 characters." required class="form-control form-control-lg" id="company_AFM" placeholder="ΑΦΜ Εταιρίας" name="company_AFM">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" pattern=".{4,20}" required title="Minimum 4 to 20 characters." class="form-control form-control-lg" id="password" placeholder="Κωδικός Πρόσβασης" name="password">
+                        <input type="text" pattern="\d*" minlength="9" maxlength="9" required title="Length must be 9 characters." required class="form-control form-control-lg" id="employer_AFM" placeholder="ΑΦΜ Εργοδότη" name="employer_AFM">
                     </div>
 
+                    <div class="form-group">
+                        <p style="font-size:90%">Ημερομηνία έναρξης:</p>
+                        <input type="date" required title="Date not valid." required class="form-control form-control-lg" id="date" placeholder="Ημερομηνία έναρξης δήλωσης" name="date">
+                    </div>
+                    <div class="form-group">
+                        <p style="font-size:90%">Ημερομηνία τερματισμού:</p>
+                        <input type="date" required title="Date not valid." required class="form-control form-control-lg" id="date" placeholder="Ημερομηνία έναρξης δήλωσης" name="date">
+                    </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radio" value="employee" id="flexRadioDefault1" required>
+                        <input class="form-check-input" type="radio" name="radio" value="suspend" id="flexRadioDefault1" required>
                         <label class="form-check-label" for="flexRadioDefault1">
-                            Είμαι Εργαζόμενος
+                            Δήλωση Αναστολής Σύμβασης Εργασίας
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radio" value="employer" id="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" name="radio" value="remote" id="flexRadioDefault2">
                         <label class="form-check-label" for="flexRadioDefault2">
-                            Είμαι Εργοδότης
+                            Δήλωση Εξ Αποστάσεως Εργασίας
                         </label>
                     </div>
-
-                    
                     <div class="my-2 d-flex justify-content-between align-items-center">
                         <div class="form-check">
                             <label class="form-check-label text-muted">
@@ -144,7 +140,7 @@
                     <div class="mt-3">
                         <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test() href="index.php">ΣΥΝΔΕΣΗ</a> -->
                         <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" onclick=test()>ΕΓΓΡΑΦΗ</a> -->
-                        <button type="submit" name ="register" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">ΕΓΓΡΑΦΗ</button>
+                        <button type="submit" name ="apply" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">ΔΗΜΙΟΥΡΓΙΑ</button>
                     </div>
                 </form>
               </div>

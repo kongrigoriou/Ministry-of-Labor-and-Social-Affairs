@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<?php include('contact_function.php'); ?>
+<!DOCTYPE html>
 <html>
 <head>
     <!-- Connect css file -->
@@ -142,7 +143,7 @@
                     </div>
                     <br>
                     <div >
-                        <form>
+                        <form action="contact.php" method="POST" class="pt-3">
                             <div class="form-group row">
                                 <label for="firstname" class="control-label col-sm-2">Όνομα</label>
                                 <div class="col-md-8">
@@ -220,7 +221,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            </div>
                             <div class="form-group row">
                                 <label for="emailid" class="col-md-2 col-form-label">Email</label>
                                 <div class="col-md-8">
@@ -231,7 +232,7 @@
                                 <label for="telnum" class="col-12 col-md-2 col-form-label">Λόγος ραντεβού</label>
                                 <div class = "col-md-8">
                                     <div class="form-check">
-                                            <select class="form-control">
+                                            <select class="form-control" name="reason">
                                                 <option>Λόγος 1</option>
                                                 <option>Λόγος 2</option>
                                                 <option>Λόγος 3</option>
@@ -239,20 +240,11 @@
                                             </select>
                                     </div>
                                 </div>
-
-                            <!-- <div class="form-group row">
-                                <label for="feedback" class="col-md-2 col-form-label">Σχόλια</label>
-                                <div class="col-md-8">
-                                    <textarea class="form-control" id="feedback" name="feedback" rows="5" placeholder="(Προαιρετικά)"></textarea>
-                                </div>
-                            </div> -->
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary button2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                                        </svg>Υποβολή
-                                    </button>
-                                </div>
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" name="register" class="btn btn-primary button2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                    </svg>Υποβολή
+                                </button>
                             </div>
                         </form>
                     </div>
