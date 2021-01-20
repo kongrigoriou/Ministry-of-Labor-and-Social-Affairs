@@ -40,6 +40,17 @@ if($row['USERNAME'] == $username && $row['PASSWORD'] == $password){
     $_SESSION['logged_in'] = '1';
     $_SESSION['wrong_input'] = '0';
     $_SESSION['AFM'] = $row['AFM'];
+
+    $afm = $_SESSION['AFM'];
+
+    $empstatus = $conn->query("SELECT * FROM employee WHERE AFM = '$afm'");
+
+    if($empstatus->num_rows){
+        $_SESSION['STATUS'] = 'employee';
+    }else{
+        $_SESSION['STATUS'] = 'employer';
+    }
+
     //redirect to home page
     header('Location: index.php');
 

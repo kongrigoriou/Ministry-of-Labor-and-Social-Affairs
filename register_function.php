@@ -74,7 +74,7 @@ if(isset($_POST['register'])){
     if(count($errors) == 0){
         //add user to the user table
         // $sql = "INSERT INTO users (AFM, NAME, SURNAME, AMA, GENDER, EMAIL) VALUES ('$afm', '$name', '$surname', '$ama', '$gender', '$email')";
-        $result = $conn->query("INSERT INTO users (AFM, NAME, SURNAME, AMA, GENDER, EMAIL) VALUES ('$afm', '$name', '$surname', '$ama', '$gender', '$email')");
+        $result = $conn->query("INSERT INTO users (AFM, NAME, SURNAME, AMA, SEX, EMAIL) VALUES ('$afm', '$name', '$surname', '$ama', '$gender', '$email')");
         echo $result;
     }
 }

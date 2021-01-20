@@ -1,3 +1,20 @@
+<!-- initialize php session -->
+<?php
+
+    //start the session
+    session_start();
+    //initialize the global variables
+    if(!isset($_SESSION['logged_in'])){
+        $_SESSION['logged_in'] = '0';
+        $_SESSION['wrong_input'] = '0';
+        $_SESSION['user_name'] = 'None';
+        $_SESSION['username'] = 'None';
+        $_SESSION['password'] = 1;
+        $_SESSION['AFM'] = -1;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" xml:lang="gr">
     <head>
@@ -29,7 +46,7 @@
                 <ul class="custom_ul">
                     <li class="custom_li"><a href="#covid" class="cov custom_a">Κορωνοϊός</a></li>
                     <li class="custom_li"><a class="custom_a" href="#help">Βοήθεια</a></li>
-                    <li class="custom_li"><a class="custom_a" href="#login">Σύνδεση</a></li>
+                    <li class="custom_li"><a class="custom_a" href="#login"><b>Προφιλ</b></a></li>
                 </ul>
             </div>
 
@@ -53,59 +70,78 @@
                 </a>
             </div>
         </div>
-        
-        <!-- Design -->
-        <div class="Design">
-            <div class="bg_rec"></div>
 
-            <!-- User Interface -->
-            <div class="profile">
-                <a href="./settings.php">
-                    <div class="edit_text">Επεξεργασία</div>
-                </a>
-                <div class="pic" >
-                    <div class="overlay"></div>
+        <?php
+            if ($_SESSION["STATUS"] == 'employer'){
+        ?>
+            <!-- Design -->
+            <div class="Design">
+                <div class="bg_rec"></div>
 
-                    <label for="hidden">
-                        <img src="Assets/User/edit_picture.png" class="edit_pic">
-                    </label>
+                <!-- User Interface -->
+                <div class="profile">
+                    <a href="./settings.php">
+                        <div class="edit_text">Επεξεργασία</div>
+                    </a>
+                    <div class="pic" >
+                        <div class="overlay"></div>
 
-                    <input id="hidden" type="file" accept="image/*"/>
-               
+                        <label for="hidden">
+                            <img src="Assets/User/edit_picture.png" class="edit_pic">
+                        </label>
+
+                        <input id="hidden" type="file" accept="image/*"/>
+                
+                    </div>
+
+                    <div class="basic_info">
+                        <ul style="list-style: none;">
+                            <?php
+                                require './profilefunc.php';
+                                
+                            ?>
+                            <li class="_misc">Σκωτία</li>
+                            <li class="_misc">13/12/1969</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="basic_info">
-                    <ul style="list-style: none;">
-                        <li class="_name">Γιάννης Κοτρώνης </li>
-                        <li class="_misc">Σκωτία</li>
-                        <li class="_misc">13/12/1969</li>
+                <div class="info_rec_l">
+                    <div class="info_title_l">
+                        Προσωπικά Στοιχεία
+                    </div>
+                </div>
+                <div class="info_rec_r">
+                    <div class="info_title_r">
+                        Στοιχεία Εργαζομένου
+                    </div>
+                </div>
+                <div class="side_rec">
+                    <div class="side_title">
+                        Ιστορικό Αιτήσεων
+                    </div>
+                    <ul class="side_ul">
+                        <li class="side_li">14/12/1969 - Έλα</li>
+                        <li class="side_li">13/12/1969 - Πάνο</li>
+                        <li class="side_li">12/12/1969 - Άι</li>
+                        <li class="side_li">11/12/1969 - Και</li>
+                        <li class="side_li">10/12/1969 - Γαμις</li>
+                        <li class="side_li">09/12/1969 - Ρε</li>
+                        <li class="side_li">08/12/1969 - Μανγκα</li>
                     </ul>
                 </div>
             </div>
-            <div class="info_rec_l">
-                <div class="info_title_l">
-                    Προσωπικά Στοιχεία
-                </div>
-            </div>
-            <div class="info_rec_r">
-                <div class="info_title_r">
-                    Στοιχεία Εργαζομένου
-                </div>
-            </div>
-            <div class="side_rec">
-                <div class="side_title">
-                    Ιστορικό Αιτήσεων
-                </div>
-                <ul class="side_ul">
-                    <li class="side_li">14/12/1969 - Έλα</li>
-                    <li class="side_li">13/12/1969 - Πάνο</li>
-                    <li class="side_li">12/12/1969 - Άι</li>
-                    <li class="side_li">11/12/1969 - Και</li>
-                    <li class="side_li">10/12/1969 - Γαμις</li>
-                    <li class="side_li">09/12/1969 - Ρε</li>
-                    <li class="side_li">08/12/1969 - Μανγκα</li>
-                </ul>
-            </div>
-        </div>
+        <?php
+            }
+        ?>
+        
+        <?php
+            if ($_SESSION["STATUS"] == 'employee'){
+        ?>
+                <li class="custom_li"><a class="custom_a" href="log_in.php">Σύνδεση</a></li>
+        <?php
+            }
+        ?>
+        
+
     </body>
 </html>

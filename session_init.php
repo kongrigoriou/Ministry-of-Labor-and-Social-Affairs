@@ -10,4 +10,6 @@
     $_SESSION['username'] = 'None';
     $_SESSION['password'] = 1;
     $_SESSION['AFM'] = -1;
+    $_SESSION['STATUS'] = 'None';
+    $_SESSION['NAME'] = 'None';
 ?>
