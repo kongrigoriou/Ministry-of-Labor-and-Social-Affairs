@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+
+<?php
+
+    session_start();
+
+?>
+
 <head>
     <!-- Connect css file -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -36,7 +43,22 @@
                     <ul class="custom_ul">
                         <li class="custom_li"><a href="#covid" class="cov custom_a"><b>Κορωνοϊός</b></a></li>
                         <li class="custom_li"><a class="custom_a" href="#help">Βοήθεια</a></li>
-                        <li class="custom_li"><a class="custom_a" href="log_in.php">Σύνδεση</a></li>
+                        <!-- IF THE USER IS LOGGED-IN -->
+                        <?php
+                                if ($_SESSION["logged_in"] == '1'){
+                            ?>
+                                    <li class="custom_li"><a class="custom_a" href="profile.php">Προφίλ</a></li>
+                            <?php
+                                }
+                            ?>
+                            
+                            <?php
+                                if ($_SESSION["logged_in"] == '0'){
+                            ?>
+                                    <li class="custom_li"><a class="custom_a" href="log_in.php">Σύνδεση</a></li>
+                            <?php
+                                }
+                            ?>
                     </ul>
                 </div>
 

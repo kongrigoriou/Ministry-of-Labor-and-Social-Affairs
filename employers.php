@@ -1,22 +1,15 @@
+<?php include('employers_function.php'); ?> 
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="gr">
 <!-- initialize php session -->
 <?php
 
     //start the session
     session_start();
-    //initialize the global variables
-    if(!isset($_SESSION['logged_in'])){
-        $_SESSION['logged_in'] = '0';
-        $_SESSION['wrong_input'] = '0';
-        $_SESSION['user_name'] = 'None';
-        $_SESSION['username'] = 'None';
-        $_SESSION['password'] = 1;
-        $_SESSION['AFM'] = -1;
-    }
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en" xml:lang="gr">
     <head>
         <!-- Connect css file -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -27,10 +20,6 @@
 
 
     <body>
-        <?php
-            require './profilefunc.php';
-            
-        ?>
         <!-- Navigation Bar Background -->
         <div class= "navigation">
             <div class="nav_rectangle"></div>
@@ -74,13 +63,27 @@
                 </a>
             </div>
         </div>
-        
+
         <div class = "square"></div>
 
         <div class = "container horizontal-center flex-center">
             <div class = "rec">
-                <h3 style = "text-align: center; margin-top: 5%;">Διαχείρηση εργαζομένων</h3>
-                <h4 style = "margin: 5%;">Αριθμός εργαζομένων:</h1>
-                
+                <h3 style = "text-align: center;margin-top: 5%;">Διαχείρηση εργαζομένων</h3>
+                <h4 style = "margin: 5%;">Αριθμός εργαζομένων: <?php printf("%d", $num); ?> </h4>
+                <?php
+                    while($row = mysqli_fetch_array($result)){
+                        //get his info
+                        $u_afm = $row['AFM'];
+                        $temp_res = $conn->query("SELECT * FROM users WHERE AFM = '$u_afm'");
+                        $temp = mysqli_fetch_array($temp_res);
+                        $out = $temp['NAME'];
+                        $out1 = $temp['SURNAME'];
+                        $out2 = $temp['AFM'];
+                        echo "<h4 style = \"margin-left: 5%; margin: 3%;\"> $out $out1 &emsp; $out2</h4>";
+                    }
+                ?>
+
+                <a style = "margin: 5%;" href="covid19_form.php">Υποβάλλετε αίτηση για εργαζόμενο.</a>
             </div>
+            
         </div>

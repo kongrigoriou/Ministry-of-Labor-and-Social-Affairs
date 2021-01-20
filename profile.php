@@ -48,7 +48,7 @@
             <!-- right portion of the navigation bar -->
             <div class="right_nav">
                 <ul class="custom_ul">
-                    <li class="custom_li"><a href="#covid" class="cov custom_a">Κορωνοϊός</a></li>
+                    <li class="custom_li"><a href="covid19.php" class="cov custom_a">Κορωνοϊός</a></li>
                     <li class="custom_li"><a class="custom_a" href="#help">Βοήθεια</a></li>
                     <li class="custom_li"><a class="custom_a" href="#login"><span style = "color: red;">Αποσύνδεση</span></a></li>
                 </ul>
