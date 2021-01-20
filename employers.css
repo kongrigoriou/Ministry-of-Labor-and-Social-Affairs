@@ -1,0 +1,48 @@
+/* text backround */
+.square{
+
+    position: fixed;
+  
+    display: inline-block;
+    width: 80vw;
+    height: 100vh;
+  
+    /* opacity */
+    background: rgba(0, 0, 0, 0.5);
+  
+    top: 0vh;
+    left: 10vw;
+    right: 10vw;
+  
+    text-align: left;
+  
+    z-index: 0;
+  }
+
+  .rec{
+    display: block;
+    width: 800px;
+    height: 600px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255); 
+    position: relative;
+    text-align: left;
+    border-radius: 25px;
+    margin-top: 20%;
+
+  }
+
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 80vh; /* These two lines are counted as one :-)       */
+    
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }
+  
+  .horizontal-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

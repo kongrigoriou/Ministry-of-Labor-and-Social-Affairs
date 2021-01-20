@@ -27,6 +27,10 @@
 
 
     <body>
+        <?php
+            require './profilefunc.php';
+            
+        ?>
         <!-- Navigation Bar Background -->
         <div class= "navigation">
             <div class="nav_rectangle"></div>
@@ -96,12 +100,10 @@
 
                     <div class="basic_info">
                         <ul style="list-style: none;">
-                            <?php
-                                require './profilefunc.php';
-                                
-                            ?>
-                            <li class="_misc">Σκωτία</li>
-                            <li class="_misc">13/12/1969</li>
+
+                            <li class="_name"> <?php printf("%s %s", $row['NAME'], $row['SURNAME']);?> </li>
+                            <li class="_misc">Εργοδότης</li>
+                            <li class="_misc"><?php printf("%s", $row2['NAME']);?></li>
                         </ul>
                     </div>
                 </div>
@@ -109,11 +111,21 @@
                     <div class="info_title_l">
                         Προσωπικά Στοιχεία
                     </div>
+                    <p class = "info" style = "margin-top:12%"><b>Όνομα:</b> <?php printf("%s", $row['NAME']);?></p>
+                    <p class = "info"><b>Επίθετο:</b> <?php printf("%s", $row['SURNAME']);?></p>
+                    <p class = "info"><b>ΑΦΜ:</b> <?php printf("%s", $afm);?></p>
+                    <p class = "info"><b>AMA:</b> <?php printf("%s", $row['AMA']);?></p>
+                    <p class = "info"><b>E-mail:</b> <?php printf("%s", $row['EMAIL']);?></p>
+
+
                 </div>
                 <div class="info_rec_r">
                     <div class="info_title_r">
-                        Στοιχεία Εργαζομένου
+                        Στοιχεία Επιχείρησης
                     </div>
+                    <p class = "info" style = "margin-top:12%"><b>Όνομα Επιχείρησης:</b> <?php printf("%s", $row2['NAME']);?></p>
+                    <p class = "info"><b>ΑΦΜ Επιχείρησης:</b> <?php printf("%s", $row2['AFM']);?></p>
+                    <a href="employers.php" class = "info">Διαχείριση εργαζομένων</a>
                 </div>
                 <div class="side_rec">
                     <div class="side_title">
@@ -137,7 +149,69 @@
         <?php
             if ($_SESSION["STATUS"] == 'employee'){
         ?>
-                <li class="custom_li"><a class="custom_a" href="log_in.php">Σύνδεση</a></li>
+                        <!-- Design -->
+                        <div class="Design">
+                <div class="bg_rec"></div>
+
+                <!-- User Interface -->
+                <div class="profile">
+                    <a href="./settings.php">
+                        <div class="edit_text">Επεξεργασία</div>
+                    </a>
+                    <div class="pic" >
+                        <div class="overlay"></div>
+
+                        <label for="hidden">
+                            <img src="Assets/User/edit_picture.png" class="edit_pic">
+                        </label>
+
+                        <input id="hidden" type="file" accept="image/*"/>
+                
+                    </div>
+
+                    <div class="basic_info">
+                        <ul style="list-style: none;">
+
+                            <li class="_name"> <?php printf("%s %s", $row['NAME'], $row['SURNAME']);?> </li>
+                            <li class="_misc">Εργαζόμενος</li>
+                            <li class="_misc"><?php printf("%s", $row2['NAME']);?></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info_rec_l">
+                    <div class="info_title_l">
+                        Προσωπικά Στοιχεία
+                    </div>
+                    <p class = "info" style = "margin-top:12%"><b>Όνομα:</b> <?php printf("%s", $row['NAME']);?></p>
+                    <p class = "info"><b>Επίθετο:</b> <?php printf("%s", $row['SURNAME']);?></p>
+                    <p class = "info"><b>ΑΦΜ:</b> <?php printf("%s", $afm);?></p>
+                    <p class = "info"><b>AMA:</b> <?php printf("%s", $row['AMA']);?></p>
+                    <p class = "info"><b>E-mail:</b> <?php printf("%s", $row['EMAIL']);?></p>
+
+
+                </div>
+                <div class="info_rec_r">
+                    <div class="info_title_r">
+                        Στοιχεία Εργασίας:
+                    </div>
+                    <p class = "info" style = "margin-top:12%"><b>Όνομα Επιχείρησης:</b> <?php printf("%s", $row2['NAME']);?></p>
+                    <p class = "info"><b>Κατάσταση Εργασίας:</b></p>
+                </div>
+                <div class="side_rec">
+                    <div class="side_title">
+                        Ιστορικό Αιτήσεων
+                    </div>
+                    <ul class="side_ul">
+                        <li class="side_li">14/12/1969 - Έλα</li>
+                        <li class="side_li">13/12/1969 - Πάνο</li>
+                        <li class="side_li">12/12/1969 - Άι</li>
+                        <li class="side_li">11/12/1969 - Και</li>
+                        <li class="side_li">10/12/1969 - Γαμις</li>
+                        <li class="side_li">09/12/1969 - Ρε</li>
+                        <li class="side_li">08/12/1969 - Μανγκα</li>
+                    </ul>
+                </div>
+            </div>
         <?php
             }
         ?>

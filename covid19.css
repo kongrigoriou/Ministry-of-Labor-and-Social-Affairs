@@ -1,6 +1,5 @@
 /* container override */
 .container{
-
     /* remove margins */
     margin-left: 0;
     margin-right: 0;
@@ -8,7 +7,6 @@
 
 /* row ovverride */
 .row{
-
     /* remove margins */
     margin-left: 0;
     margin-right: 0;
@@ -16,9 +14,8 @@
     height: 1vh;
 }
 
-/* mardown for the title of the page */
+/* marκdown for the title of the page */
 .covid_h1{
-
     position: relative;
     color: white;
     font-size: 42px;
@@ -46,15 +43,12 @@
 }
 
 .covid_h5{
-
     color: white;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
-
 }
 
 /* text backround */
 .square{
-
     position: fixed;
 
     display: inline-block;
@@ -65,6 +59,26 @@
     background: rgba(0, 0, 0, 0.5);
 
     top: 0vh;
+    left: 10vw;
+    right: 10vw;
+
+    text-align: left;
+
+    z-index: 0;
+}
+
+/* Same as above but instead of black white lol */
+.anti-square{
+    position: absolute;
+
+    display: inline-block;
+    width: 80vw;
+    height: 100vh;
+
+    /* opacity */
+    background: rgba(255, 255, 255, 0.01);
+
+    top: 110vh;
     left: 10vw;
     right: 10vw;
 
@@ -94,29 +108,34 @@
 }
 
 .employer{
-
-    position: relative;
-    top: 95vh;
-    left: 20vw;
-    z-index: 100;
-    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
-}
-
-.employee{
-
     position: relative;
     top: 120vh;
     left: 20vw;
     z-index: 100;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
 }
+#emp{
+    display: none;
+}
 
-.case{
-
+.employee{
     position: relative;
-
-    top: 158vh;
+    top: 120vh;
     left: 20vw;
     z-index: 100;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
+}
+#empee{
+    display: none;
+}
+
+.case{
+    position: relative;
+    top: 120vh;
+    left: 20vw;
+    z-index: 100;
+    font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
+}
+#sick{
+    display:none;
 }

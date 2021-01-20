@@ -93,7 +93,7 @@ if(isset($_POST['register'])){
         if($work == 'employee'){
             
             //insert him to the employee table
-            $result = $conn->query("INSERT INTO employee (AFM, COMPANY_AFM) VALUES ('$afm', $company_afm')");
+            $result = $conn->query("INSERT INTO employee (AFM, COMPANY_AFM) VALUES ('$afm', '$company_afm')");
 
             //redirect user to the index.php
             header('Location: index.php');

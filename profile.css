@@ -64,7 +64,7 @@ body{
 }
 ._name{
     color: white;
-    font-size: 18px;
+    font-size: x-large;
     margin: 10px 0;
 }
 ._misc{
@@ -126,11 +126,12 @@ body{
     height: 58vh;
     background-color: var(--dark);
     border-radius: 4px;
+    text-align: left;
 }
 .info_title_l{
     position: fixed;
     color: white;
-    font-size: 20px;
+    font-size: x-large;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     text-align: center;
 
@@ -151,7 +152,7 @@ body{
 .info_title_r{
     position: fixed;
     color: white;
-    font-size: 20px;
+    font-size: x-large;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     text-align: center;
 
@@ -169,6 +170,7 @@ body{
     height: 80vh;
     background-color: var(--dark);
     border-radius: 4px;
+    text-align: left;
 }
 .side_title{
     position: fixed;
@@ -177,25 +179,25 @@ body{
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
     text-align: center;
 
-    right: 14vw;
-    top: 21vh;
+    margin: 2%;
     z-index: 100;
 }
 .side_ul{
     position: fixed;
     list-style-type: none;
     padding: 0;
-    top: 26vh;
-    right: 16vw;
     z-index: 100;
+
+    margin: 2%;
+    margin-top: 5%;
+
 }
 .side_li{
     z-index: 100;
-    margin-top: 4px;
     color: white;
     font-size: 14px;
     font-family: url("Assets/myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF");
-    text-align: left;
+
 }
 
 /* Navigation! */
@@ -266,4 +268,14 @@ body{
 
 .BrCr{
     position: fixed;
+}
+
+.info{
+    position: relative;
+    color: white;
+    z-index: 100;
+    font-size:large;
+    /* top: 10%; */
+    margin-top: 5%;
+    margin-left: 5%;
 }

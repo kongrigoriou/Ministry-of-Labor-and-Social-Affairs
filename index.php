@@ -13,7 +13,6 @@
         $_SESSION['username'] = 'None';
         $_SESSION['password'] = 1;
         $_SESSION['AFM'] = -1;
-        $_SESSION['name'] = 'None';
     }
 
 ?>

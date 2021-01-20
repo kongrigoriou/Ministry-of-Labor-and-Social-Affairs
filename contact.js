@@ -12,8 +12,8 @@ $(document).ready(function(){
     });
     
     $('.cell').click(function(){
-    $('.cell').removeClass('select');
-    $(this).addClass('select');
+        $('.cell').removeClass('select');
+        $(this).addClass('select');
     });
     
-    });
+});
