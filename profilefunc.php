@@ -22,17 +22,17 @@
         $row3000 = mysqli_fetch_array($temp);
         $compafm = $row3000['COMPANY_AFM'];
         $comp = $conn->query("SELECT * FROM company WHERE AFM = '$compafm'");
+
+        //covid-forms
+        $covform = $conn->query("SELECT * FROM covid_forms WHERE EMPLOYEE_AFM = '$afm'");
+        if($covform->num_rows != 0){
+            $row156 = mysqli_fetch_array($covform);
+            $covtype = $row156['TYPE'];
+            // $covready = mysqli_fetch_array($covtype); 
+        }
     }
     
     
     $row2 = mysqli_fetch_array($comp);
-
-    $compafm = $row2['AFM'];
-
-    $emp = $conn->query("SELECT * FROM employee WHERE COMPANY_AFM = '$compafm'");
-
-    // while($row3 = mysqli_fetch_array($emp));{
-
-    // }
 
 ?>

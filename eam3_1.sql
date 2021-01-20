@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 13, 2021 at 11:09 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Host: localhost
+-- Generation Time: Jan 20, 2021 at 08:21 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,24 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `users`
+-- Database: `eam3`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointments`
+--
+
+CREATE TABLE `appointments` (
+  `NAME` varchar(20) NOT NULL,
+  `SURNAME` varchar(20) NOT NULL,
+  `PHONE` int(10) NOT NULL,
+  `DATE` varchar(30) NOT NULL,
+  `HOUR` varchar(10) NOT NULL,
+  `EMAIL` varchar(30) NOT NULL,
+  `VISIT_REASON` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -28,7 +44,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `company` (
-  `AFM` int(11) NOT NULL,
+  `AFM` int(9) NOT NULL,
   `NAME` varchar(20) NOT NULL,
   `DOY` varchar(20) NOT NULL,
   `EMPLOYER_AFM` int(11) NOT NULL
@@ -40,6 +56,26 @@ CREATE TABLE `company` (
 
 INSERT INTO `company` (`AFM`, `NAME`, `DOY`, `EMPLOYER_AFM`) VALUES
 (444444444, 'xontra gatia', 'XOLARGOU', 111111111);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `covid_forms`
+--
+
+CREATE TABLE `covid_forms` (
+  `EMPLOYEE_AFM` varchar(9) NOT NULL,
+  `EMPLOYER_AFM` varchar(9) NOT NULL,
+  `COMPANY_AFM` varchar(9) NOT NULL,
+  `TYPE` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `covid_forms`
+--
+
+INSERT INTO `covid_forms` (`EMPLOYEE_AFM`, `EMPLOYER_AFM`, `COMPANY_AFM`, `TYPE`) VALUES
+('222222222', '111111111', '444444444', 'suspend');
 
 -- --------------------------------------------------------
 
@@ -69,8 +105,8 @@ INSERT INTO `credentials` (`AFM`, `USERNAME`, `PASSWORD`) VALUES
 --
 
 CREATE TABLE `employee` (
-  `AFM` int(11) NOT NULL,
-  `COMPANY_AFM` int(11) NOT NULL
+  `AFM` int(9) NOT NULL,
+  `COMPANY_AFM` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -105,19 +141,19 @@ INSERT INTO `employer` (`AFM`) VALUES
 --
 
 CREATE TABLE `users` (
-  `AFM` int(11) NOT NULL,
+  `AFM` int(9) NOT NULL,
   `NAME` varchar(20) NOT NULL,
   `SURNAME` varchar(20) NOT NULL,
   `AMA` int(11) NOT NULL,
-  `SEX` varchar(20) NOT NULL,
-  `EMAIL` varchar(20) NOT NULL
+  `GENDER` varchar(20) NOT NULL,
+  `EMAIL` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`AFM`, `NAME`, `SURNAME`, `AMA`, `SEX`, `EMAIL`) VALUES
+INSERT INTO `users` (`AFM`, `NAME`, `SURNAME`, `AMA`, `GENDER`, `EMAIL`) VALUES
 (111111111, 'Konstantina', 'Grigoriou', 121212, 'FEMALE', 'kwng@gmail.com'),
 (222222222, 'Giorgos', 'Kokkinis', 131313, 'MALE', 'kokkinisg@gmail.com'),
 (333333333, 'Panagiotis', 'Korovesis', 141414, 'MALE', 'panosk@gmail.com');
@@ -127,17 +163,32 @@ INSERT INTO `users` (`AFM`, `NAME`, `SURNAME`, `AMA`, `SEX`, `EMAIL`) VALUES
 --
 
 --
+-- Indexes for table `appointments`
+--
+ALTER TABLE `appointments`
+  ADD PRIMARY KEY (`EMAIL`),
+  ADD UNIQUE KEY `EMAIL` (`EMAIL`);
+
+--
 -- Indexes for table `company`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`AFM`),
+  ADD UNIQUE KEY `NAME` (`NAME`),
   ADD KEY `employer_company` (`EMPLOYER_AFM`);
+
+--
+-- Indexes for table `covid_forms`
+--
+ALTER TABLE `covid_forms`
+  ADD PRIMARY KEY (`EMPLOYEE_AFM`);
 
 --
 -- Indexes for table `credentials`
 --
 ALTER TABLE `credentials`
-  ADD PRIMARY KEY (`AFM`);
+  ADD PRIMARY KEY (`AFM`),
+  ADD UNIQUE KEY `USERNAME` (`USERNAME`);
 
 --
 -- Indexes for table `employee`
@@ -158,7 +209,8 @@ ALTER TABLE `employer`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`AFM`),
-  ADD UNIQUE KEY `AFM` (`AFM`);
+  ADD UNIQUE KEY `AFM` (`AFM`),
+  ADD UNIQUE KEY `AMA` (`AMA`,`EMAIL`);
 
 --
 -- Constraints for dumped tables
