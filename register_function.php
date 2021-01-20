@@ -77,16 +77,24 @@ if(isset($_POST['register'])){
         $result = $conn->query("INSERT INTO users (AFM, NAME, SURNAME, AMA, SEX, EMAIL) VALUES ('$afm', '$name', '$surname', '$ama', '$gender', '$email')");
         echo $result;
 
-        //if he is an employee
+        //add password-username to the credentials table
+        $result = $conn->query("INSERT INTO credentials (AFM, USERNAME, PASSWORD) VALUES ('$afm', '$username', '$password')");
+        
+
         //update the session variables to keep the new user logged in
+        $_SESSION['logged_in'] = '1';
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        $_SESSION['AFM'] = $afm;
+        $_SESSION['STATUS'] = $work;
+        $_SESSION['name'] = $name;
+
+        //if he is an employee
         if($work == 'employee'){
-            $_SESSION['logged_in'] = '1';
-            $_SESSION['username'] = $username;
-            $_SESSION['password'] = $password;
-            $_SESSION['AFM'] = $afm;
-            $_SESSION['STATUS'] = $work;
-            $_SESSION['name'] = $name;
             
+            //insert him to the employee table
+            $result = $conn->query("INSERT INTO employee (AFM, COMPANY_AFM) VALUES ('$afm', $company_afm')");
+
             //redirect user to the index.php
             header('Location: index.php');
         }
