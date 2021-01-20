@@ -76,6 +76,20 @@ if(isset($_POST['register'])){
         // $sql = "INSERT INTO users (AFM, NAME, SURNAME, AMA, GENDER, EMAIL) VALUES ('$afm', '$name', '$surname', '$ama', '$gender', '$email')";
         $result = $conn->query("INSERT INTO users (AFM, NAME, SURNAME, AMA, SEX, EMAIL) VALUES ('$afm', '$name', '$surname', '$ama', '$gender', '$email')");
         echo $result;
+
+        //if he is an employee
+        //update the session variables to keep the new user logged in
+        if($work == 'employee'){
+            $_SESSION['logged_in'] = '1';
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['AFM'] = $afm;
+            $_SESSION['STATUS'] = $work;
+            $_SESSION['name'] = $name;
+            
+            //redirect user to the index.php
+            header('Location: index.php');
+        }
     }
 }
 

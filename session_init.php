@@ -11,5 +11,5 @@
     $_SESSION['password'] = 1;
     $_SESSION['AFM'] = -1;
     $_SESSION['STATUS'] = 'None';
-    $_SESSION['NAME'] = 'None';
+    $_SESSION['name'] = 'None';
 ?>
