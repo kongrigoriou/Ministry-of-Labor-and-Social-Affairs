@@ -93,10 +93,28 @@ if(isset($_POST['register'])){
         if($work == 'employee'){
             
             //insert him to the employee table
-            $result = $conn->query("INSERT INTO employee (AFM, COMPANY_AFM) VALUES ('$afm', $company_afm')");
+            $result = $conn->query("INSERT INTO employee (AFM, COMPANY_AFM) VALUES ('$afm', '$company_afm')");
 
             //redirect user to the index.php
             header('Location: index.php');
+        
+        //if he is an employer
+        }else{
+
+            //insert him to the employer table
+            $result = $conn->query("INSERT INTO employee (AFM) VALUES ('$afm')");
+
+            //search for the company afm
+            $result = $conn->query("SELECT * from company WHERE AFM == '$company_afm'");
+            
+            //if the company exists redirect to the index 
+            if($result->num_rows == 1){
+                header('Location: index.php');
+            //if not redirect him to a company creation page
+            }else{
+                header('Location: create_company.php');
+            }
+        
         }
     }
 }
