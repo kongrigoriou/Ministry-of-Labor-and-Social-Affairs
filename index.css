@@ -3,7 +3,21 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
+
+    box-shadow: 0 110vh 100px 50px black;
 }
+
+.black_bg{
+    position: absolute;
+    top: 118vh;
+    width: 100vw;
+    height: 1000px;
+    background: black;
+
+    z-index: -99999;
+}
+
+
 
 .custom_h1{
     position: relative;

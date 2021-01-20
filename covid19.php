@@ -10,12 +10,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <script src = covid19.js></script>
     <!-- page title -->
     <title>Κορωνοϊός</title>
 </head>
 
 <body>
-
         <div class="row">
                  <!-- navigation bar backround -->
             <div class="navigation">
@@ -82,7 +82,8 @@
         <div class="container-fluid">
             <!-- backround square -->
             <div class="row">
-                <div class="square"></div>                    
+                <div class="square"></div>
+                <div class="anti-square"></div>
             </div>
         </div>
 
@@ -100,7 +101,7 @@
                     </ol>
                     <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <a href="#emp">
+                        <a href="#emp" onclick="showEmp()">
                             <img class="d-block w-100" src="Assets/covid/boss.jpg" alt="Ergodotis">
                         </a>
                         <div class="carousel-caption d-none d-md-block">
@@ -109,7 +110,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <a href="#empee">
+                        <a href="#empee" onclick="showEmpee()">
                             <img class="d-block w-100" src="Assets/covid/workers.jpg" alt="Ergazomenos">
                         </a>
                         <div class="carousel-caption d-none d-md-block">
@@ -118,7 +119,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <a href="#sick">
+                        <a href="#sick" onclick="showSick()">
                             <img class="d-block w-100" src="Assets/covid/covid.jpg" alt="Krousma">
                         </a>
                         <div class="carousel-caption d-none d-md-block">
@@ -138,6 +139,7 @@
                     </a>
                 <!-- end of carousel -->
                 </div>
+
             <!-- end of column -->
             </div>
         <!-- end of first element -->
@@ -179,6 +181,13 @@
                             &emsp; <b>α</b>) Eνημερώνουμε τον εργοδότη ή την υπηρεσία μας <br>
                             &emsp; <b>β</b>) Eπικοινωνούμε με το θεράποντα ιατρό μας <br>
                             &emsp; <b>γ</b>) Επικοινωνούμε με τον ΕΟΔΥ (τηλέφωνα επικοινωνίας 210.52.12.054 ή 1135).
+                            <br> <br>
+
+                            Η καθημερινότητα της πανδημίας είναι δύσκολη. Ως υπουργείο εργασίας στεκόμαστε δίπλα στον εργαζόμενο 
+                            και προτείνουμε ορισμένες εναλλακτικές στην εργασιακή ζωή. Αυτές είναι οι εξής: <br>
+                            &emsp; <b>α</b>) <a href="https://www.lipsum.com/" target="_blank" rel="noopener noreferrer">Τηλεργασία</a>. <br>
+                            &emsp; <b>β</b>) <a href="https://www.lipsum.com/" target="_blank" rel="noopener noreferrer">Αναστολή Σύμβασης</a>. <br>
+                            &emsp; <b>γ</b>) <a href="leave.php">Άδεια Ειδικού Σκοπού</a>. <br>
                         </p>
                     </div>
                 <!-- end of column -->
@@ -210,7 +219,13 @@
                 <div class="col-12">
                     <div class="extra">
                         <h2 class = covid_h2 id="info">Περισσότερες πληροφορίες</h2>
-                        <p class="covid_h5">Για περισσότερες πληροφορίες πατήστε <a href="https://www.ypakp.gr/uploads/files/3501.pdf">εδώ</a></p>
+                        <p class="covid_h5">
+                            Για περισσότερες πληροφορίες πατήστε 
+                            <a href="https://www.ypakp.gr/uploads/files/3501.pdf">εδώ</a>. <br>
+                            Σε περίπτωση εκδήλωσης κρούσματος πατήστε 
+                            <a href="Assets/covid/flowchart_1.jpg">εδώ</a> ή 
+                            <a href="Assets/covid/flowchart_2.jpg">εδώ</a>.
+                        </p>
 
                     </div>
                 <!-- end of column -->
@@ -220,6 +235,8 @@
 
         <!-- end of grid -->
         </div>
+
+        <div class="black_bg"></div>
 
 </body>
 </html>

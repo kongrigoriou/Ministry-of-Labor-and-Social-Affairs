@@ -59,6 +59,17 @@
             <div class="bg_rec"></div>
 
             <!-- User Interface -->
+            <?php if (isset($_SESSION['success'])) : ?> 
+                <div class="error success" > 
+                    <h3> 
+                        <?php
+                            echo $_SESSION['success'];  
+                            unset($_SESSION['success']); 
+                        ?> 
+                    </h3> 
+                </div> 
+            <?php endif ?> 
+
             <div class="profile">
                 <a href="./settings.php">
                     <div class="edit_text">Επεξεργασία</div>
@@ -76,9 +87,15 @@
 
                 <div class="basic_info">
                     <ul style="list-style: none;">
-                        <li class="_name">Γιάννης Κοτρώνης </li>
-                        <li class="_misc">Σκωτία</li>
-                        <li class="_misc">13/12/1969</li>
+                        <li class="_name">
+                            <?php echo $_SESSION['username']; ?> 
+                        </li>
+                        <li class="_misc">
+                            <?php echo $_SESSION['AFM']; ?> 
+                        </li>
+                        <li class="_misc">
+                            <?php echo $_SESSION['AMA']; ?> 
+                        </li>
                     </ul>
                 </div>
             </div>

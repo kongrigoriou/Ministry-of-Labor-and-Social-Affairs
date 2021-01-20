@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 13, 2021 at 11:09 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Host: localhost
+-- Generation Time: Jan 17, 2021 at 03:17 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `users`
+-- Database: `eam3`
 --
 
 -- --------------------------------------------------------
@@ -109,15 +109,15 @@ CREATE TABLE `users` (
   `NAME` varchar(20) NOT NULL,
   `SURNAME` varchar(20) NOT NULL,
   `AMA` int(11) NOT NULL,
-  `SEX` varchar(20) NOT NULL,
-  `EMAIL` varchar(20) NOT NULL
+  `GENDER` varchar(20) NOT NULL,
+  `EMAIL` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`AFM`, `NAME`, `SURNAME`, `AMA`, `SEX`, `EMAIL`) VALUES
+INSERT INTO `users` (`AFM`, `NAME`, `SURNAME`, `AMA`, `GENDER`, `EMAIL`) VALUES
 (111111111, 'Konstantina', 'Grigoriou', 121212, 'FEMALE', 'kwng@gmail.com'),
 (222222222, 'Giorgos', 'Kokkinis', 131313, 'MALE', 'kokkinisg@gmail.com'),
 (333333333, 'Panagiotis', 'Korovesis', 141414, 'MALE', 'panosk@gmail.com');
