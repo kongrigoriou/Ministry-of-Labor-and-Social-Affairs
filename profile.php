@@ -38,7 +38,7 @@
             <!-- left portion of the navigation bar -->
             <div class="left_nav">
                 <ul class="custom_ul">
-                        <li class="custom_li"><a class="custom_a" href="#contact">Επικοινωνία</a></li>
+                        <li class="custom_li"><a class="custom_a" href="contact.php">Επικοινωνία</a></li>
                         <li class="custom_li"><a class="custom_a" href="#ministry">Υπουργείο</a></li>
                         <li class="custom_li"><a class="custom_a" href="#law">Νομοθεσία</a></li>
                         <li class="custom_li"><a class="custom_a" href="#apply">Αιτήσεις</a></li>
@@ -50,7 +50,7 @@
                 <ul class="custom_ul">
                     <li class="custom_li"><a href="#covid" class="cov custom_a">Κορωνοϊός</a></li>
                     <li class="custom_li"><a class="custom_a" href="#help">Βοήθεια</a></li>
-                    <li class="custom_li"><a class="custom_a" href="#login"><b>Προφιλ</b></a></li>
+                    <li class="custom_li"><a class="custom_a" href="#login"><span style = "color: red;">Αποσύνδεση</span></a></li>
                 </ul>
             </div>
 
@@ -195,7 +195,20 @@
                         Στοιχεία Εργασίας:
                     </div>
                     <p class = "info" style = "margin-top:12%"><b>Όνομα Επιχείρησης:</b> <?php printf("%s", $row2['NAME']);?></p>
-                    <p class = "info"><b>Κατάσταση Εργασίας:</b></p>
+                    <p class = "info"><b>Κατάσταση Εργασίας:</b><?php
+
+                        if($covform->num_rows != 0){
+                            if($covtype == 'suspend' ){
+                                printf(" Σε αναστολή");    
+                            }elseif($covtype == 'remote'){
+                                printf(" Τηλεργασία");
+                            }
+                        }else{
+                            printf("Δια ζώσης");
+                        }
+                        
+                    
+                    ?></p>
                 </div>
                 <div class="side_rec">
                     <div class="side_title">
