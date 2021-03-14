@@ -132,13 +132,13 @@
                         Ιστορικό Αιτήσεων
                     </div>
                     <ul class="side_ul">
-                        <li class="side_li">14/12/1969 - Έλα</li>
-                        <li class="side_li">13/12/1969 - Πάνο</li>
-                        <li class="side_li">12/12/1969 - Άι</li>
-                        <li class="side_li">11/12/1969 - Και</li>
-                        <li class="side_li">10/12/1969 - Γαμις</li>
-                        <li class="side_li">09/12/1969 - Ρε</li>
-                        <li class="side_li">08/12/1969 - Μανγκα</li>
+                        <li class="side_li">14/12/1969 - Αίτηση #1</li>
+                        <li class="side_li">13/12/1969 - Αίτηση #2</li>
+                        <li class="side_li">12/12/1969 - Αίτηση #3</li>
+                        <li class="side_li">11/12/1969 - Αίτηση #4</li>
+                        <li class="side_li">10/12/1969 - Αίτηση #5</li>
+                        <li class="side_li">09/12/1969 - Αίτηση #6</li>
+                        <li class="side_li">08/12/1969 - Αίτηση #7</li>
                     </ul>
                 </div>
             </div>
