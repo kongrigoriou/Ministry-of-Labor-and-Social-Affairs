@@ -18,7 +18,7 @@ Conversion notes:
 * Source doc: ReadMe
 ----->
 
-
+Check Documentation for images of the website!
 
 Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών 
 Τμήμα Πληροφορικής και Τηλεπικοινωνιών 
